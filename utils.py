@@ -1,4 +1,5 @@
 from itertools import chain, zip_longest
+import numpy as np
 
 
 def pretty_table(matrix):
@@ -13,3 +14,13 @@ def pretty_table(matrix):
     fmt = '\t'.join('{{:{}}}'.format(x) for x in lens)
     table = [fmt.format(*row) for row in s]
     print('\n'.join(table))
+
+
+def predict_with_threshold(probs, threshold):
+    preds = []
+    for prob in probs:
+        if prob > threshold:
+            preds.append(1)
+        else:
+            preds.append(0)
+    return np.array(preds)
