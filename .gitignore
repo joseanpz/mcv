@@ -61,3 +61,9 @@ target/
 .idea/
 
 venv/
+
+JAT_MCV_UNIVERSO_MODELOADO_FILTROS.csv
+
+JAT_MCV_UNIVERSO_MODELADO_PREVIO_labels.csv
+
+*.csv
