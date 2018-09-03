@@ -5,7 +5,7 @@ from xgboost import XGBClassifier, train, DMatrix, Booster
 from sklearn import preprocessing as prp
 from sklearn.metrics import confusion_matrix, f1_score, recall_score, precision_score, accuracy_score
 
-from utils import pretty_table, predict_with_threshold
+from utils import pretty_table, predict_with_threshold, get_xgb_feat_importances
 
 sk_type_classifier = False
 preprocess_data = False
@@ -13,19 +13,37 @@ preprocess_test = False
 
 train_model = False
 model_file = 'models\md100_nr10_lr0.3.model'
-threshold = 0.10
+threshold = 0.15
 
-header = pd.read_csv('JAT_MCV_UNIVERSO_MODELADO_PREVIO_labels.csv', header=None)
+header = pd.read_csv('JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
 target = 'BMI'
-features = list(header.iloc[0, range(2, 522)].values)
-removes = ['AMORTIZACIONEXIGIBLE', 'AMORTIZACIONNOEXIGIBLE', 'PAGOREALIZADO', 'VOLUNTADPAGO', 'VOLUNTADPAGOPERIODO']
-for rm in removes:
-    features.remove(rm)
+
+
+#features = list(header.iloc[0, range(2, 696)].values)
+
+feat_names = list(header.iloc[0, range(2, 696)].values)
+feat_names[116] = 'rm1'
+feat_names[117] = 'rm2'
+feat_names[118] = 'rm3'
+feat_names[119] = 'rm4'
+feat_names[120] = 'rm5'
+
+
+# removes = ['AMORTIZACIONEXIGIBLE', 'AMORTIZACIONNOEXIGIBLE', 'PAGOREALIZADO', 'VOLUNTADPAGO', 'VOLUNTADPAGOPERIODO']
+# for rm in removes:
+#     features.remove(rm)
 strategy = 'mean'
 
 if preprocess_data:
     print('------------------ Initialize preprocessing -----------------')
-    data = pd.read_csv('JAT_MCV_UNIVERSO_MODELOADO_FILTROS.csv', header=None, names=header.loc[0, :].values)
+    data = pd.read_csv(
+        'JAT_MCV_VAR_INT_CAL_HIST_VP.csv',
+        names=['LABEL', 'BMI']+feat_names
+    ).drop(
+        ['rm1', 'rm2', 'rm3', 'rm4', 'rm5'],
+        axis=1
+    )
+    del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
     print('------------------ Data Loaded ------------------------------')
     if preprocess_test:
         np.random.seed(0)
@@ -34,15 +52,31 @@ if preprocess_data:
     data = data.replace(to_replace='\\N', value=np.nan)
 
     # select features and target if needed
-    data = data.loc[:, [target] + features]
-
+    data = data.loc[:, [target] + feat_names]
+    print('------------------- Impute Data ---------------------')
     # impute nans
     imputer = prp.Imputer(missing_values='NaN', strategy=strategy, axis=0)
-    imputer = imputer.fit(data.loc[:, features])
-    data.loc[:, features] = imputer.transform(data.loc[:, features])
+    scaler = prp.StandardScaler()
+    count = 0
+    left_limit = 0
+    for right_limit in [200, 400, 689]:
+        col_names = feat_names[left_limit:right_limit]
+        cols = data.loc[:, col_names]
+        imputer = imputer.fit(cols)
+        data.loc[:, col_names] = imputer.transform(cols)
+        print('Feature name: ', right_limit, count)
+        left_limit = right_limit
+        count += 1
+        # normal distributed
 
-    # normal distributed
-    data.loc[:, features] = prp.StandardScaler().fit_transform(data.drop(target, axis=1))
+    l_limit = 0
+    for r_limit in [200, 400, 689]:
+        col_names = feat_names[l_limit:r_limit]
+        cols = data.loc[:, col_names]
+        data.loc[:, col_names] = scaler.fit_transform(cols)
+        print('Feature name: ', r_limit, count)
+        l_limit = r_limit
+        count += 1
 
     # split into train, validation and test sets
     np.random.seed(0)
@@ -51,41 +85,37 @@ if preprocess_data:
     val_list = (rand_split >= 0.6) & (rand_split < 0.8)
     test_list = rand_split >= 0.8
 
-    data[train_list].to_csv('train.csv', index=False)
-    data[val_list].to_csv('validation.csv', index=False)
-    data[test_list].to_csv('test.csv', index=False)
+    data[train_list].to_csv('data/train.csv', index=False)
+    data[val_list].to_csv('data/validation.csv', index=False)
+    data[test_list].to_csv('data/test.csv', index=False)
     del data
     print('------------------ Finish preprocessing -----------------')
 
-
+else:
+    del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
 print('-------------------- Loading preprocessed data ----------------')
-data_train = pd.read_csv('train.csv')
-data_val = pd.read_csv('validation.csv')
-data_test = pd.read_csv('test.csv')
+data_train = pd.read_csv(
+    'data/train.csv',
+    #names=[target]+feat_names
+)
+data_val = pd.read_csv(
+    'data/validation.csv',
+    #names=[target]+feat_names
+)
+data_test = pd.read_csv(
+    'data/test.csv',
+    #names=[target]+feat_names
+)
 print('----------------- Finish loading ---------------')
 
 train_y = data_train.loc[:, target].values
-train_X = data_train.loc[:, features].values
+train_X = data_train.loc[:, feat_names].values
 
 val_y = data_val.loc[:, target].values
-val_X = data_val.loc[:, features].values
+val_X = data_val.loc[:, feat_names].values
 
 test_y = data_test.loc[:, target].values
-test_X = data_test.loc[:, features].values
-
-# describe training data
-# print(data_train.describe())
-# print(data_train.head(), '\n', '-----------------')
-
-
-# describe validation data
-# print(data_val.describe())
-# print(data_val.head(), '\n', '-----------------')
-
-# describe test data
-# print(data_test.describe())
-# print(data_test.head(), '\n', '-----------------')
-
+test_X = data_test.loc[:, feat_names].values
 
 # fit xgboost
 if sk_type_classifier:
@@ -121,9 +151,9 @@ else:
     # read in data
 
     print('----------------  Initialize DMatrix -------------------')
-    dtrain = DMatrix(train_X, label=train_y)
-    dtest = DMatrix(test_X, label=test_y)
-    dval = DMatrix(val_X, label=val_y)
+    dtrain = DMatrix(train_X, label=train_y, feature_names=feat_names)
+    dtest = DMatrix(test_X, label=test_y, feature_names=feat_names)
+    dval = DMatrix(val_X, label=val_y, feature_names=feat_names)
     print('----------------  Finish Init Dmatrix -------------------')
 
     # specify parameters via map
@@ -143,13 +173,17 @@ else:
         print('------------------ Initialize trainig ---------------------')
         bst = train(params, dtrain, num_round)
         bst.save_model('models/md{}_nr{}_lr{}.model'.format(str(num_round), str(max_depth), str(learning_rate)))
+        feat_imp = get_xgb_feat_importances(bst)
+        print(feat_imp)
         print('------------------ Finish trainig -------------------------')
     else:
         bst = Booster({'nthread': 4})
         bst.load_model(model_file)
+        feat_imp = get_xgb_feat_importances(bst)
+        print(feat_imp)
     # calculate threshold
     if not threshold:
-        print('------------------ Intitialize threshold calcul -----------------')
+        print('------------------ Intitialize threshold calculation -----------------')
         f1_sc = 0
         max_step = 0
         thr_sample = (dtest, test_y)
@@ -157,7 +191,7 @@ else:
         for thr_step in np.linspace(0, 1, 101):
             _preds = predict_with_threshold(_score_preds, thr_step)
             f1_sc_step = f1_score(thr_sample[1], _preds)
-            # print(thr_step, f1_sc_step)
+            print(thr_step, f1_sc_step)
             if f1_sc_step >= f1_sc:
                 f1_sc = f1_sc_step
                 max_step = thr_step
