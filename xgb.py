@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from xgboost import XGBClassifier, train, DMatrix, Booster
+import pickle
+
+from bayes_opt import BayesianOptimization
 
 from sklearn import preprocessing as prp
 from sklearn.metrics import confusion_matrix, f1_score, recall_score, precision_score, accuracy_score
@@ -14,18 +17,7 @@ preprocess_test = False
 train_model = False
 model_file = 'models\md100_nr10_lr0.3.model'
 threshold = None
-
-header = pd.read_csv('JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
 target = 'BMI'
-
-# adhoc for int_cal_hist_vp
-feat_names = list(header.iloc[0, range(2, 696)].values)
-feat_names[116] = 'rm1'
-feat_names[117] = 'rm2'
-feat_names[118] = 'rm3'
-feat_names[119] = 'rm4'
-feat_names[120] = 'rm5'
-
 # adhoc for int_cal_hist_vp
 # removes = ['AMORTIZACIONEXIGIBLE', 'AMORTIZACIONNOEXIGIBLE', 'PAGOREALIZADO', 'VOLUNTADPAGO', 'VOLUNTADPAGOPERIODO']
 # for rm in removes:
@@ -42,6 +34,14 @@ val_data_file = 'data/{}/validation_seed{}_stg-{}.csv'.format(dataset_folder, st
 test_data_file = 'data/{}/test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 
 if preprocess_data:
+    # adhoc for int_cal_hist_vp
+    header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
+    feat_names = list(header.iloc[0, range(2, 696)].values)
+    feat_names[116] = 'rm1'
+    feat_names[117] = 'rm2'
+    feat_names[118] = 'rm3'
+    feat_names[119] = 'rm4'
+    feat_names[120] = 'rm5'
     print('------------------ Initialize preprocessing -----------------')
     data = pd.read_csv(
         'JAT_MCV_VAR_INT_CAL_HIST_VP.csv',
@@ -52,10 +52,12 @@ if preprocess_data:
     )
     del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
     print('------------------ Data Loaded ------------------------------')
+
     if preprocess_test:
         np.random.seed(seed)
         rand_split = np.random.rand(len(data))
         data = data[rand_split >= 0.99]
+
     data = data.replace(to_replace='\\N', value=np.nan)
 
     # select features and target if needed
@@ -99,19 +101,22 @@ if preprocess_data:
     print('------------------ Finish preprocessing -----------------')
 
 else:
+    header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
+
+    feat_names = list(header.iloc[0, range(2, 696)].values)
+
     del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
+
+
 print('-------------------- Loading preprocessed data ----------------')
 data_train = pd.read_csv(
-    'data/train.csv',
-    #names=[target]+feat_names
+    train_data_file
 )
 data_val = pd.read_csv(
-    'data/validation.csv',
-    #names=[target]+feat_names
+    val_data_file
 )
 data_test = pd.read_csv(
-    'data/test.csv',
-    #names=[target]+feat_names
+    test_data_file
 )
 print('----------------- Finish loading ---------------')
 
@@ -177,15 +182,58 @@ else:
     }
 
     if train_model:
+
         print('------------------ Initialize trainig ---------------------')
         bst = train(params, dtrain, num_round)
-        bst.save_model('models/md{}_nr{}_lr{}.model'.format(str(num_round), str(max_depth), str(learning_rate)))
+        bst.save_model(
+            'models/md{}_nr{}_lr{}.model'.format(
+                str(num_round), str(max_depth), str(learning_rate)
+            )
+        )
+        bst.dump_model(
+            'models/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
+                str(num_round), str(max_depth), str(learning_rate)
+            ),
+            with_stats=False
+        )
+        # booster pickle dump
+        pickle.dump(
+            bst,
+            open(
+                'models/pickles/md{}_nr{}_lr{}.model'.format(
+                    str(num_round),
+                    str(max_depth),
+                    str(learning_rate)
+                ),
+                "wb"
+            )
+        )
+
         feat_imp = get_xgb_feat_importances(bst)
         print(feat_imp)
         print('------------------ Finish trainig -------------------------')
     else:
-        bst = Booster({'nthread': 4})
-        bst.load_model(model_file)
+        old_bst = Booster({'nthread': 4})
+        old_bst.load_model(
+            'models/md{}_nr{}_lr{}.model'.format(
+                str(num_round),
+                str(max_depth),
+                str(learning_rate)
+            )
+        )
+
+        # booster pickle load
+        bst = pickle.load(
+            open(
+                'models/pickles/md{}_nr{}_lr{}.model'.format(
+                    str(num_round),
+                    str(max_depth),
+                    str(learning_rate)
+                ),
+                "rb"
+            )
+        )
+
         feat_imp = get_xgb_feat_importances(bst)
         print(feat_imp)
     # calculate threshold
@@ -193,7 +241,7 @@ else:
         print('------------------ Intitialize threshold calculation -----------------')
         f1_sc = 0
         max_step = 0
-        thr_sample = (dtest, test_y)
+        thr_sample = (dtrain, train_y)
         _score_preds = bst.predict(thr_sample[0])
         for thr_step in np.linspace(0, 1, 101):
             _preds = predict_with_threshold(_score_preds, thr_step)
