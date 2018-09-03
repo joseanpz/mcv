@@ -13,14 +13,12 @@ preprocess_test = False
 
 train_model = False
 model_file = 'models\md100_nr10_lr0.3.model'
-threshold = 0.15
+threshold = None
 
 header = pd.read_csv('JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
 target = 'BMI'
 
-
-#features = list(header.iloc[0, range(2, 696)].values)
-
+# adhoc for int_cal_hist_vp
 feat_names = list(header.iloc[0, range(2, 696)].values)
 feat_names[116] = 'rm1'
 feat_names[117] = 'rm2'
@@ -28,11 +26,20 @@ feat_names[118] = 'rm3'
 feat_names[119] = 'rm4'
 feat_names[120] = 'rm5'
 
-
+# adhoc for int_cal_hist_vp
 # removes = ['AMORTIZACIONEXIGIBLE', 'AMORTIZACIONNOEXIGIBLE', 'PAGOREALIZADO', 'VOLUNTADPAGO', 'VOLUNTADPAGOPERIODO']
 # for rm in removes:
 #     features.remove(rm)
+
 strategy = 'mean'
+seed = 0
+
+# dataset_folder = 'int_cal_hist'
+dataset_folder = 'int_cal_hist_vp'
+
+train_data_file = 'data/{}/train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+val_data_file = 'data/{}/validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+test_data_file = 'data/{}/test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 
 if preprocess_data:
     print('------------------ Initialize preprocessing -----------------')
@@ -46,7 +53,7 @@ if preprocess_data:
     del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
     print('------------------ Data Loaded ------------------------------')
     if preprocess_test:
-        np.random.seed(0)
+        np.random.seed(seed)
         rand_split = np.random.rand(len(data))
         data = data[rand_split >= 0.99]
     data = data.replace(to_replace='\\N', value=np.nan)
@@ -79,15 +86,15 @@ if preprocess_data:
         count += 1
 
     # split into train, validation and test sets
-    np.random.seed(0)
+    np.random.seed(seed)
     rand_split = np.random.rand(len(data))
     train_list = rand_split < 0.6
     val_list = (rand_split >= 0.6) & (rand_split < 0.8)
     test_list = rand_split >= 0.8
 
-    data[train_list].to_csv('data/train.csv', index=False)
-    data[val_list].to_csv('data/validation.csv', index=False)
-    data[test_list].to_csv('data/test.csv', index=False)
+    data[train_list].to_csv(train_data_file, index=False)
+    data[val_list].to_csv(val_data_file, index=False)
+    data[test_list].to_csv(test_data_file, index=False)
     del data
     print('------------------ Finish preprocessing -----------------')
 
