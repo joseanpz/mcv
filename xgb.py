@@ -8,20 +8,18 @@ from bayes_opt import BayesianOptimization
 from sklearn import preprocessing as prp
 from sklearn.metrics import confusion_matrix, f1_score, recall_score, precision_score, accuracy_score
 
-from utils import pretty_table, predict_with_threshold, get_xgb_feat_importances
+from utils import pretty_table, predict_with_threshold, get_xgb_feat_importances, val_func
+
+from bayes_opt import BayesianOptimization
 
 sk_type_classifier = False
 preprocess_data = False
 preprocess_test = False
 
-train_model = False
+train_model = True
 model_file = 'models\md100_nr10_lr0.3.model'
 threshold = None
 target = 'BMI'
-# adhoc for int_cal_hist_vp
-# removes = ['AMORTIZACIONEXIGIBLE', 'AMORTIZACIONNOEXIGIBLE', 'PAGOREALIZADO', 'VOLUNTADPAGO', 'VOLUNTADPAGOPERIODO']
-# for rm in removes:
-#     features.remove(rm)
 
 strategy = 'mean'
 seed = 0
@@ -44,7 +42,7 @@ if preprocess_data:
     feat_names[120] = 'rm5'
     print('------------------ Initialize preprocessing -----------------')
     data = pd.read_csv(
-        'JAT_MCV_VAR_INT_CAL_HIST_VP.csv',
+        'data/raw/MCV_.csv',
         names=['LABEL', 'BMI']+feat_names
     ).drop(
         ['rm1', 'rm2', 'rm3', 'rm4', 'rm5'],
@@ -169,7 +167,8 @@ else:
     print('----------------  Finish Init Dmatrix -------------------')
 
     # specify parameters via map
-    num_round = 100
+    evals = [(dtest, 'eval'), (dtrain, 'train')]
+    num_round = 1
     max_depth = 10
     learning_rate = 0.3
     params = {
@@ -184,7 +183,7 @@ else:
     if train_model:
 
         print('------------------ Initialize trainig ---------------------')
-        bst = train(params, dtrain, num_round)
+        bst = train(params, dtrain, num_round, evals, feval=val_func)
         bst.save_model(
             'models/md{}_nr{}_lr{}.model'.format(
                 str(num_round), str(max_depth), str(learning_rate)

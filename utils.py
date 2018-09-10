@@ -2,6 +2,7 @@ from itertools import chain, zip_longest
 import numpy as np
 import pandas as pd
 import xgboost as xgb
+from sklearn.metrics import confusion_matrix, f1_score, recall_score, precision_score, accuracy_score
 
 
 def pretty_table(matrix):
@@ -26,6 +27,16 @@ def predict_with_threshold(probs, threshold):
         else:
             preds.append(0)
     return np.array(preds)
+
+
+def val_func(pred_probs, dmat):
+    thrs = [0.1, 0.3, 0.5, 0.7, 0.9]
+    ret = []
+    for thr in thrs:
+        preds = predict_with_threshold(pred_probs, thr)
+        score = f1_score(preds, dmat.get_float_info('label'))
+        ret.append(('f1_score_thr{}'.format(thr), score))
+    return ret
 
 
 def get_xgb_feat_importances(clf):
