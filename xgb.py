@@ -11,44 +11,34 @@ from sklearn.metrics import confusion_matrix, f1_score, recall_score, precision_
 from utils import pretty_table, predict_with_threshold, get_xgb_feat_importances, val_func
 
 from bayes_opt import BayesianOptimization
+pd.options.display.max_rows = 4000
+
 
 sk_type_classifier = False
-preprocess_data = False
+preprocess_data = True
 preprocess_test = False
 
 train_model = True
-model_file = 'models\md100_nr10_lr0.3.model'
+# model_file = 'models\md100_nr10_lr0.3.model'
 threshold = None
 target = 'BMI'
 
-strategy = 'mean'
+strategy = 'median'
 seed = 0
 
 # dataset_folder = 'int_cal_hist'
-dataset_folder = 'int_cal_hist_vp'
+dataset_folder = 'mcv_var_1'
 
 train_data_file = 'data/{}/train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 val_data_file = 'data/{}/validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 test_data_file = 'data/{}/test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 
 if preprocess_data:
-    # adhoc for int_cal_hist_vp
-    header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
-    feat_names = list(header.iloc[0, range(2, 696)].values)
-    feat_names[116] = 'rm1'
-    feat_names[117] = 'rm2'
-    feat_names[118] = 'rm3'
-    feat_names[119] = 'rm4'
-    feat_names[120] = 'rm5'
     print('------------------ Initialize preprocessing -----------------')
     data = pd.read_csv(
-        'data/raw/MCV_.csv',
-        names=['LABEL', 'BMI']+feat_names
-    ).drop(
-        ['rm1', 'rm2', 'rm3', 'rm4', 'rm5'],
-        axis=1
+        'data/raw/MCV_VAR_1.csv'
     )
-    del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
+    feat_names = data.columns[3:517]
     print('------------------ Data Loaded ------------------------------')
 
     if preprocess_test:
@@ -56,17 +46,17 @@ if preprocess_data:
         rand_split = np.random.rand(len(data))
         data = data[rand_split >= 0.99]
 
-    data = data.replace(to_replace='\\N', value=np.nan)
+    # data = data.replace(to_replace='\\N', value=np.nan)
 
     # select features and target if needed
-    data = data.loc[:, [target] + feat_names]
+    # data = data.loc[:, [target] + feat_names]
     print('------------------- Impute Data ---------------------')
     # impute nans
     imputer = prp.Imputer(missing_values='NaN', strategy=strategy, axis=0)
     scaler = prp.StandardScaler()
     count = 0
     left_limit = 0
-    for right_limit in [200, 400, 689]:
+    for right_limit in [200, 400, 515]:
         col_names = feat_names[left_limit:right_limit]
         cols = data.loc[:, col_names]
         imputer = imputer.fit(cols)
@@ -77,7 +67,7 @@ if preprocess_data:
         # normal distributed
 
     l_limit = 0
-    for r_limit in [200, 400, 689]:
+    for r_limit in [200, 400, 515]:
         col_names = feat_names[l_limit:r_limit]
         cols = data.loc[:, col_names]
         data.loc[:, col_names] = scaler.fit_transform(cols)
@@ -88,7 +78,7 @@ if preprocess_data:
     # split into train, validation and test sets
     np.random.seed(seed)
     rand_split = np.random.rand(len(data))
-    train_list = rand_split < 0.6
+    train_list = rand_split < 0.8
     val_list = (rand_split >= 0.6) & (rand_split < 0.8)
     test_list = rand_split >= 0.8
 
@@ -101,7 +91,7 @@ if preprocess_data:
 else:
     header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
 
-    feat_names = list(header.iloc[0, range(2, 696)].values)
+    feat_names = list(header.iloc[0, range(2, 522)].values)
 
     del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
 
@@ -167,8 +157,8 @@ else:
     print('----------------  Finish Init Dmatrix -------------------')
 
     # specify parameters via map
-    evals = [(dtest, 'eval'), (dtrain, 'train')]
-    num_round = 1
+    evals = [(dtest, 'eval')]
+    num_round = 100
     max_depth = 10
     learning_rate = 0.3
     params = {
@@ -186,12 +176,12 @@ else:
         bst = train(params, dtrain, num_round, evals, feval=val_func)
         bst.save_model(
             'models/md{}_nr{}_lr{}.model'.format(
-                str(num_round), str(max_depth), str(learning_rate)
+                str(max_depth), str(num_round), str(learning_rate)
             )
         )
         bst.dump_model(
             'models/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
-                str(num_round), str(max_depth), str(learning_rate)
+                str(max_depth), str(num_round), str(learning_rate)
             ),
             with_stats=False
         )
@@ -200,8 +190,8 @@ else:
             bst,
             open(
                 'models/pickles/md{}_nr{}_lr{}.model'.format(
-                    str(num_round),
                     str(max_depth),
+                    str(num_round),
                     str(learning_rate)
                 ),
                 "wb"
@@ -209,14 +199,15 @@ else:
         )
 
         feat_imp = get_xgb_feat_importances(bst)
+        feat_imp.to_csv('data/mcv_var_1/feature_importances.csv', index=False)
         print(feat_imp)
         print('------------------ Finish trainig -------------------------')
     else:
         old_bst = Booster({'nthread': 4})
         old_bst.load_model(
             'models/md{}_nr{}_lr{}.model'.format(
-                str(num_round),
                 str(max_depth),
+                str(num_round),
                 str(learning_rate)
             )
         )
@@ -225,8 +216,8 @@ else:
         bst = pickle.load(
             open(
                 'models/pickles/md{}_nr{}_lr{}.model'.format(
-                    str(num_round),
                     str(max_depth),
+                    str(num_round),
                     str(learning_rate)
                 ),
                 "rb"
@@ -240,7 +231,7 @@ else:
         print('------------------ Intitialize threshold calculation -----------------')
         f1_sc = 0
         max_step = 0
-        thr_sample = (dtrain, train_y)
+        thr_sample = (dtest, test_y)
         _score_preds = bst.predict(thr_sample[0])
         for thr_step in np.linspace(0, 1, 101):
             _preds = predict_with_threshold(_score_preds, thr_step)
