@@ -15,8 +15,10 @@ pd.options.display.max_rows = 4000
 
 
 sk_type_classifier = False
-preprocess_data = True
+preprocess_data = False
 preprocess_test = False
+
+feature_selection = True
 
 train_model = True
 # model_file = 'models\md100_nr10_lr0.3.model'
@@ -27,18 +29,33 @@ strategy = 'median'
 seed = 0
 
 # dataset_folder = 'int_cal_hist'
-dataset_folder = 'mcv_var_1'
+dataset_folder = 'mcv_var_1/robust_scaler/feature_selection'
 
-train_data_file = 'data/{}/train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
-val_data_file = 'data/{}/validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
-test_data_file = 'data/{}/test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+train_data_file = 'data/{}/../train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+val_data_file = 'data/{}/../validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+test_data_file = 'data/{}/../test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+
 
 if preprocess_data:
     print('------------------ Initialize preprocessing -----------------')
     data = pd.read_csv(
         'data/raw/MCV_VAR_1.csv'
     )
-    feat_names = data.columns[3:517]
+
+    if feature_selection:
+        feat_imp_file = 'data/{}/../feature_importances.csv'.format(dataset_folder)
+        important_features = pd.read_csv(feat_imp_file)
+        feat_names = important_features.loc[:19, 'Feature']
+    else:
+        feat_names = data.columns[2:517]
+
+    # # revolvente feature
+    # revolv_flag_data = data.loc[:, ['REVOLVENTE']]
+    # data_revolvente = data.loc[revolv_flag_data['REVOLVENTE'] == 1]
+    # data_no_revolvente = data.loc[revolv_flag_data['REVOLVENTE'] == 0]
+    # del data
+    # data = data_no_revolvente
+
     print('------------------ Data Loaded ------------------------------')
 
     if preprocess_test:
@@ -53,10 +70,10 @@ if preprocess_data:
     print('------------------- Impute Data ---------------------')
     # impute nans
     imputer = prp.Imputer(missing_values='NaN', strategy=strategy, axis=0)
-    scaler = prp.StandardScaler()
+    scaler = prp.RobustScaler()
     count = 0
     left_limit = 0
-    for right_limit in [200, 400, 515]:
+    for right_limit in [200]:  # [200, 400, 515]:
         col_names = feat_names[left_limit:right_limit]
         cols = data.loc[:, col_names]
         imputer = imputer.fit(cols)
@@ -67,7 +84,7 @@ if preprocess_data:
         # normal distributed
 
     l_limit = 0
-    for r_limit in [200, 400, 515]:
+    for r_limit in [200]:  # [200, 400, 515]:
         col_names = feat_names[l_limit:r_limit]
         cols = data.loc[:, col_names]
         data.loc[:, col_names] = scaler.fit_transform(cols)
@@ -88,12 +105,12 @@ if preprocess_data:
     del data
     print('------------------ Finish preprocessing -----------------')
 
-else:
-    header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
-
-    feat_names = list(header.iloc[0, range(2, 522)].values)
-
-    del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
+# else:
+#     header = pd.read_csv('data/raw/JAT_MCV_VAR_INT_CAL_HIST_VP_LABELS.csv', header=None)
+#
+#     feat_names = list(header.iloc[0, range(2, 522)].values)
+#
+#     del feat_names[116], feat_names[116], feat_names[116], feat_names[116], feat_names[116]
 
 
 print('-------------------- Loading preprocessed data ----------------')
@@ -106,6 +123,13 @@ data_val = pd.read_csv(
 data_test = pd.read_csv(
     test_data_file
 )
+if feature_selection:
+    feat_imp_file = 'data/{}/../feature_importances.csv'.format(dataset_folder)
+    important_features = pd.read_csv(feat_imp_file)
+    feat_names = important_features.loc[:49, 'Feature']
+else:
+    feat_names = data_train.columns[2:517]
+
 print('----------------- Finish loading ---------------')
 
 train_y = data_train.loc[:, target].values
@@ -158,7 +182,7 @@ else:
 
     # specify parameters via map
     evals = [(dtest, 'eval')]
-    num_round = 100
+    num_round = 50
     max_depth = 10
     learning_rate = 0.3
     params = {
@@ -174,14 +198,13 @@ else:
 
         print('------------------ Initialize trainig ---------------------')
         bst = train(params, dtrain, num_round, evals, feval=val_func)
-        bst.save_model(
-            'models/md{}_nr{}_lr{}.model'.format(
-                str(max_depth), str(num_round), str(learning_rate)
-            )
-        )
+
         bst.dump_model(
-            'models/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
-                str(max_depth), str(num_round), str(learning_rate)
+            'models/{}/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
+                dataset_folder,
+                str(max_depth),
+                str(num_round),
+                str(learning_rate)
             ),
             with_stats=False
         )
@@ -189,7 +212,8 @@ else:
         pickle.dump(
             bst,
             open(
-                'models/pickles/md{}_nr{}_lr{}.model'.format(
+                'models/{}/pickles/md{}_nr{}_lr{}.model'.format(
+                    dataset_folder,
                     str(max_depth),
                     str(num_round),
                     str(learning_rate)
@@ -199,13 +223,14 @@ else:
         )
 
         feat_imp = get_xgb_feat_importances(bst)
-        feat_imp.to_csv('data/mcv_var_1/feature_importances.csv', index=False)
+        feat_imp.to_csv('data/{}/feature_importances.csv'.format(dataset_folder), index=False)
         print(feat_imp)
         print('------------------ Finish trainig -------------------------')
     else:
         old_bst = Booster({'nthread': 4})
         old_bst.load_model(
-            'models/md{}_nr{}_lr{}.model'.format(
+            'models/{}/md{}_nr{}_lr{}.model'.format(
+                dataset_folder,
                 str(max_depth),
                 str(num_round),
                 str(learning_rate)
@@ -215,7 +240,8 @@ else:
         # booster pickle load
         bst = pickle.load(
             open(
-                'models/pickles/md{}_nr{}_lr{}.model'.format(
+                'models/{}/pickles/md{}_nr{}_lr{}.model'.format(
+                    dataset_folder,
                     str(max_depth),
                     str(num_round),
                     str(learning_rate)

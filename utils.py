@@ -30,7 +30,7 @@ def predict_with_threshold(probs, threshold):
 
 
 def val_func(pred_probs, dmat):
-    thrs = [0.1, 0.3, 0.5, 0.7, 0.9]
+    thrs = [0.1, 0.25, 0.3, 0.5]
     ret = []
     for thr in thrs:
         preds = predict_with_threshold(pred_probs, thr)

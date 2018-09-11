@@ -18,6 +18,8 @@ sk_type_classifier = False
 preprocess_data = False
 preprocess_test = False
 
+feature_selection = True
+
 train_model = True
 # model_file = 'models\md100_nr10_lr0.3.model'
 threshold = None
@@ -27,11 +29,11 @@ strategy = 'median'
 seed = 0
 
 # dataset_folder = 'int_cal_hist'
-dataset_folder = 'mcv_var_1'
+dataset_folder = 'mcv_var_1/robust_scaler/feature_selection'
 
-train_data_file = 'data/{}/train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
-val_data_file = 'data/{}/validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
-test_data_file = 'data/{}/test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+train_data_file = 'data/{}/../train_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+val_data_file = 'data/{}/../validation_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
+test_data_file = 'data/{}/../test_seed{}_stg-{}.csv'.format(dataset_folder, str(seed), strategy)
 
 print('----------------- Loading data ---------------')
 data_train = pd.read_csv(
@@ -43,7 +45,13 @@ data_val = pd.read_csv(
 data_test = pd.read_csv(
     test_data_file
 )
-feat_names = data_train.columns[2:517]
+if feature_selection:
+    feat_imp_file = 'data/{}/../feature_importances.csv'.format(dataset_folder)
+    important_features = pd.read_csv(feat_imp_file)
+    feat_names = important_features.loc[:49, 'Feature']
+else:
+    feat_names = data_train.columns[2:517]
+
 print('----------------- Finish loading ---------------')
 
 train_y = data_train.loc[:, target].values
@@ -76,24 +84,15 @@ params = {
 }
 
 bst = pickle.load(
-    open('models/pickles/md10_nr250_lr0.3.model', "rb")
-        # 'models/pickles/md{}_nr{}_lr{}.model'.format(
-        #     str(max_depth),
-        #     str(num_round),
-        #     str(learning_rate)
-        # ),
+    open('models/{}/pickles/md10_nr100_lr0.3.model'.format(dataset_folder), "rb")
 )
 
 print('------------------ Initialize trainig ---------------------')
 bst = train(params, dtrain, num_round, evals, feval=val_func, xgb_model=bst)
-bst.save_model(
-    'models/md{}_nr{}_lr{}.model'.format(
-        str(num_round), str(max_depth), str(learning_rate)
-    )
-)
+
 bst.dump_model(
-    'models/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
-        str(num_round), str(max_depth), str(learning_rate)
+    'models/{}/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
+        dataset_folder, str(max_depth), str(bst.best_ntree_limit), str(learning_rate)
     ),
     with_stats=False
 )
@@ -101,7 +100,8 @@ bst.dump_model(
 pickle.dump(
     bst,
     open(
-        'models/pickles/md{}_nr{}_lr{}.model'.format(
+        'models/{}/pickles/md{}_nr{}_lr{}.model'.format(
+            dataset_folder,
             str(max_depth),
             str(bst.best_ntree_limit),
             str(learning_rate)
@@ -111,6 +111,7 @@ pickle.dump(
 )
 
 feat_imp = get_xgb_feat_importances(bst)
+feat_imp.to_csv('data/{}/feature_importances.csv'.format(dataset_folder), index=False)
 print(feat_imp)
 print('------------------ Finish trainig -------------------------')
 
