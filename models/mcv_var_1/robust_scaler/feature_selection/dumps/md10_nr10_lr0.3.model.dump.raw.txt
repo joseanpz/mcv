@@ -1,0 +1,2402 @@
+booster[0]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<29.9403] yes=1,no=2,missing=1
+	1:[NUM_VIGENTEH_12M<-11.5] yes=3,no=4,missing=3
+		3:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.632487357] yes=7,no=8,missing=7
+			7:[MONTHS_ON_FILE_BANKING<-0.5] yes=15,no=16,missing=15
+				15:[DEUDA_TOT<-0.0672268942] yes=29,no=30,missing=29
+					29:[MS_OP<0.833333373] yes=53,no=54,missing=53
+						53:[MIN_BAL_06M<-0.313572586] yes=81,no=82,missing=81
+							81:leaf=-0.360000014
+							82:leaf=0.538983047
+						54:leaf=-0.485714316
+					30:leaf=-0.533333361
+				16:[BK_DEUDA_CP<161.084991] yes=31,no=32,missing=31
+					31:leaf=-0.592026591
+					32:leaf=0.507692337
+			8:[DEUDA_TOT<-0.642857194] yes=17,no=18,missing=17
+				17:[R_BAL_BY_CRED_LIM<0.615101755] yes=33,no=34,missing=33
+					33:[MIN_D_CRED_LIM_TO_BAL_06M<1.92840719] yes=55,no=56,missing=55
+						55:[REVOLVENTE<-0.5] yes=83,no=84,missing=83
+							83:[MAX_R_BAL_BY_CRED_LIM_12M<0.234082058] yes=117,no=118,missing=117
+								117:[MAX_R_BAL_BY_CRED_LIM_06M<0.349023461] yes=151,no=152,missing=151
+									151:leaf=-0.400000036
+									152:leaf=0.507692337
+								118:leaf=-0.507692337
+							84:leaf=-0.578947425
+						56:[MAX_R_BAL_BY_MAX_BAL_06M<-0.187998638] yes=85,no=86,missing=85
+							85:leaf=0.504000008
+							86:leaf=-0.360000014
+					34:[AVG_R_BAL_BY_CRED_LIM_06M<0.699475765] yes=57,no=58,missing=57
+						57:leaf=0.549295783
+						58:leaf=-0.480000019
+				18:[MAX_R_BAL_BY_MAX_BAL_03M<-2.00533724] yes=35,no=36,missing=35
+					35:[BK12_NUM_CRED<-0.234999985] yes=59,no=60,missing=59
+						59:[MAX_R_BAL_BY_CRED_LIM_12M<-1.05219364] yes=87,no=88,missing=87
+							87:leaf=0.5657143
+							88:leaf=-0.360000014
+						60:leaf=-0.574999988
+					36:[MAX_BAL_06M<2.18838525] yes=61,no=62,missing=61
+						61:[NBK12_NUM_CRED<-0.308699965] yes=89,no=90,missing=89
+							89:leaf=-0.51111114
+							90:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.350536048] yes=119,no=120,missing=119
+								119:[BK12_NUM_CRED<-0.0249999985] yes=153,no=154,missing=153
+									153:[DS_CL<0.614056408] yes=189,no=190,missing=189
+										189:leaf=0.551445127
+										190:leaf=-0.360000014
+									154:[BK12_MAX_CREDIT_AMT<-0.209677413] yes=191,no=192,missing=191
+										191:leaf=0.297479004
+										192:leaf=-0.338181823
+								120:[BK12_IND_QCRA<2.5] yes=155,no=156,missing=155
+									155:[MAX_R_BAL_BY_MAX_BAL_03M<-1.72060144] yes=193,no=194,missing=193
+										193:leaf=-0.381818205
+										194:leaf=0.508742034
+									156:leaf=-0.41538465
+						62:leaf=-0.533333361
+		4:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_12M<0.388840526] yes=9,no=10,missing=9
+			9:[NUM_VENC59_12M<1.5] yes=19,no=20,missing=19
+				19:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<0.313904226] yes=37,no=38,missing=37
+					37:[AVG_R_BAL_BY_MAX_BAL_06M<0.423633039] yes=63,no=64,missing=63
+						63:[NUM_VENC29_12M<2.5] yes=91,no=92,missing=91
+							91:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-4.20572138] yes=121,no=122,missing=121
+								121:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-4.21458244] yes=157,no=158,missing=157
+									157:leaf=-0.538461566
+									158:leaf=0.507692337
+								122:[DS_CL<-0.495379388] yes=159,no=160,missing=159
+									159:[DS_CL<-0.495865762] yes=195,no=196,missing=195
+										195:leaf=-0.575510263
+										196:leaf=0.507692337
+									160:leaf=-0.599189222
+							92:[DS_OL_CL<0.735995412] yes=123,no=124,missing=123
+								123:leaf=-0.5657143
+								124:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_12M<-0.311260879] yes=161,no=162,missing=161
+									161:leaf=0.482352972
+									162:leaf=-0.428571463
+						64:[MIN_R_BAL_BY_MAX_BAL_06M<0.368621945] yes=93,no=94,missing=93
+							93:[MAX_R_BAL_BY_CRED_LIM_12M<-0.665452957] yes=125,no=126,missing=125
+								125:leaf=0.549295783
+								126:leaf=-0.458823562
+							94:[R_BAL_BY_CRED_LIM<0.645685554] yes=127,no=128,missing=127
+								127:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<0.218932986] yes=163,no=164,missing=163
+									163:leaf=-0.591272771
+									164:[CUR_BAL<-0.327929378] yes=197,no=198,missing=197
+										197:leaf=0.507692337
+										198:leaf=-0.41538465
+								128:leaf=0.507692337
+					38:[AVG_AVG_HI_CALCAR_CEIL_06M<0.24602142] yes=65,no=66,missing=65
+						65:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.276115417] yes=95,no=96,missing=95
+							95:leaf=-0.5657143
+							96:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_12M<0.450445831] yes=129,no=130,missing=129
+								129:leaf=-0.517241418
+								130:[AVG_PND_MENOS_BAL_12M<0.246351302] yes=165,no=166,missing=165
+									165:[NBK12_COMM_PCT_PLUS<0.625] yes=199,no=200,missing=199
+										199:leaf=0.556834579
+										200:leaf=-0.300000012
+									166:leaf=-0.428571463
+						66:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_06M<1.66914415] yes=97,no=98,missing=97
+							97:[AVG_MAX_HI_CALCAR_CEIL_12M<-0.108571567] yes=131,no=132,missing=131
+								131:[MAX_BAL_12M<-0.38569662] yes=167,no=168,missing=167
+									167:leaf=0.550000012
+									168:leaf=-0.466666698
+								132:[MIN_R_BAL_BY_CRED_LIM_12M<0.397705287] yes=169,no=170,missing=169
+									169:leaf=-0.596141517
+									170:[R_BAL_BY_CRED_LIM<0.00357700372] yes=201,no=202,missing=201
+										201:leaf=0.507692337
+										202:leaf=-0.568000019
+							98:[MAX_AVG_HI_CALCAR_CEIL_12M<4.17613649] yes=133,no=134,missing=133
+								133:[MAX_R_BAL_BY_MAX_BAL_12M<-0.680062532] yes=171,no=172,missing=171
+									171:[MIN_MAX_HI_CALCAR_FLOOR_12M<1.12962961] yes=203,no=204,missing=203
+										203:leaf=0.441860467
+										204:leaf=-0.4909091
+									172:leaf=-0.520000041
+								134:leaf=-0.569999993
+				20:[MAX_VENCIDO1MAS_06M<0.75] yes=39,no=40,missing=39
+					39:leaf=0.561290324
+					40:leaf=-0.531428576
+			10:[R_BAL_BY_CRED_LIM<0.622934341] yes=21,no=22,missing=21
+				21:[MIN_R_BAL_BY_CRED_LIM_06M<0.535467505] yes=41,no=42,missing=41
+					41:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<2.40107584] yes=67,no=68,missing=67
+						67:[DEUDA_TOT<-0.60084033] yes=99,no=100,missing=99
+							99:[MS_OP<-0.452380955] yes=135,no=136,missing=135
+								135:leaf=-0.551020443
+								136:leaf=0.461538494
+							100:leaf=-0.592835844
+						68:[AVG_AVG_HI_CALCAR_L_12M<0.40591377] yes=101,no=102,missing=101
+							101:leaf=0.550000012
+							102:leaf=-0.440000027
+					42:[MIN_BAL_12M<0.61043489] yes=69,no=70,missing=69
+						69:[MIN_BAL_06M<-0.243881747] yes=103,no=104,missing=103
+							103:leaf=-0.571084321
+							104:[DS_OL_CL<-0.414269507] yes=137,no=138,missing=137
+								137:leaf=-0.558620751
+								138:[MIN_R_BAL_BY_MAX_BAL_06M<0.18192929] yes=173,no=174,missing=173
+									173:leaf=-0.541463435
+									174:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.0331537649] yes=205,no=206,missing=205
+										205:leaf=0.0579775274
+										206:leaf=0.346583873
+						70:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.39505741] yes=105,no=106,missing=105
+							105:[MIN_R_BAL_BY_MAX_BAL_03M<0.157141805] yes=139,no=140,missing=139
+								139:leaf=-0.552000046
+								140:[AVG_PND_MAS_MAX_HI_CALCAR_L_03M<-0.208333433] yes=175,no=176,missing=175
+									175:leaf=-0.5
+									176:[MAX_PCT_VENC29_12M<0.128161669] yes=207,no=208,missing=207
+										207:leaf=0.437419385
+										208:leaf=-0.440000027
+							106:[NUM_MAX_HI_CALCAR_FLOOR_12M<0.357142866] yes=141,no=142,missing=141
+								141:leaf=-0.589655221
+								142:[MAX_AVG_HI_CALCAR_CEIL_12M<-0.0359848514] yes=177,no=178,missing=177
+									177:[DS_CL<-0.419260681] yes=209,no=210,missing=209
+										209:leaf=0.507692337
+										210:leaf=-0.300000012
+									178:leaf=-0.54285717
+				22:[AVG_VIGENTEH_03M<0.361090392] yes=43,no=44,missing=43
+					43:[D_CRED_LIM_TO_BAL<-0.274746895] yes=71,no=72,missing=71
+						71:[DS_OL_CL<-0.414080262] yes=107,no=108,missing=107
+							107:leaf=-0.381818205
+							108:[NBK12_PCT_SAT<0.00256548799] yes=143,no=144,missing=143
+								143:[MIN_R_BAL_BY_MAX_BAL_12M<0.297356844] yes=179,no=180,missing=179
+									179:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_12M<0.47751689] yes=211,no=212,missing=211
+										211:leaf=0.550000012
+										212:leaf=-0.400000036
+									180:leaf=0.555279493
+								144:leaf=-0.333333373
+						72:leaf=-0.381818205
+					44:leaf=-0.4909091
+	2:[MAX_PCT_VENC59_12M<0.0158671327] yes=5,no=6,missing=5
+		5:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.0565126091] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<0.352715075] yes=23,no=24,missing=23
+				23:leaf=-0.590000033
+				24:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-1.17815781] yes=45,no=46,missing=45
+					45:leaf=-0.559322059
+					46:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.229761899] yes=73,no=74,missing=73
+						73:[AVG_PCT_VIGENTEH_06M<-5.51368141] yes=109,no=110,missing=109
+							109:[MIN_D_CRED_LIM_TO_BAL_12M<-0.168000028] yes=145,no=146,missing=145
+								145:leaf=-0.485714316
+								146:[AVG_PND_MENOS_PCT_VENC59_12M<0.000277999992] yes=181,no=182,missing=181
+									181:[MIN_AVG_HI_CALCAR_L_06M<-0.375] yes=213,no=214,missing=213
+										213:leaf=-0.41538465
+										214:leaf=0.492030889
+									182:leaf=-0.450000018
+							110:leaf=-0.520000041
+						74:leaf=-0.541463435
+			12:[MAX_D_CRED_LIM_TO_BAL_03M<1.17667842] yes=25,no=26,missing=25
+				25:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<-0.870934486] yes=47,no=48,missing=47
+					47:leaf=-0.529411793
+					48:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.707897902] yes=75,no=76,missing=75
+						75:[MAX_R_BAL_BY_MAX_BAL_12M<-3.12904978] yes=111,no=112,missing=111
+							111:leaf=-0.4909091
+							112:[MS_OP<-0.690476179] yes=147,no=148,missing=147
+								147:[BK12_CLEAN<1.75] yes=183,no=184,missing=183
+									183:leaf=-0.533333361
+									184:leaf=0.507692337
+								148:[NBK12_PCT_60PLUS<23.8894558] yes=185,no=186,missing=185
+									185:[MAX_PCT_VENC29_12M<166.388855] yes=215,no=216,missing=215
+										215:leaf=0.472147137
+										216:leaf=-0.41538465
+									186:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_06M<2.47222233] yes=217,no=218,missing=217
+										217:leaf=-0.552941203
+										218:leaf=0.433846176
+						76:leaf=-0.495652169
+				26:leaf=-0.538461566
+		6:[MS_OP<2.35714293] yes=13,no=14,missing=13
+			13:[AVG_R_BAL_BY_MAX_BAL_03M<-1.5499332] yes=27,no=28,missing=27
+				27:[AVG_PND_MAS_PCT_VIGENTEH_03M<-552.336792] yes=49,no=50,missing=49
+					49:[DS_CL<0.496108949] yes=77,no=78,missing=77
+						77:[AVG_D_CRED_LIM_TO_BAL_06M<0.864398956] yes=113,no=114,missing=113
+							113:leaf=0.568695664
+							114:leaf=-0.333333373
+						78:leaf=-0.450000018
+					50:leaf=-0.53513515
+				28:[BK12_PCT_90PLUS<-0.920000017] yes=51,no=52,missing=51
+					51:leaf=-0.440000027
+					52:[AVG_PND_MENOS_VENC89_06M<872.571411] yes=79,no=80,missing=79
+						79:[MIN_D_CRED_LIM_TO_BAL_12M<8.10134697] yes=115,no=116,missing=115
+							115:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<-0.740553975] yes=149,no=150,missing=149
+								149:leaf=-0.381818205
+								150:[MAX_CRED_LIM_12M<-0.390740752] yes=187,no=188,missing=187
+									187:leaf=-0.360000014
+									188:[MIN_R_BAL_BY_MAX_BAL_12M<0.512355208] yes=219,no=220,missing=219
+										219:leaf=0.514246225
+										220:leaf=-0.360000014
+							116:leaf=-0.400000036
+						80:leaf=-0.440000027
+			14:leaf=-0.4909091
+booster[1]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<29.9403] yes=1,no=2,missing=1
+	1:[NUM_VIGENTEH_12M<-7.5] yes=3,no=4,missing=3
+		3:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.632487357] yes=7,no=8,missing=7
+			7:[MONTHS_ON_FILE_BANKING<-0.5] yes=15,no=16,missing=15
+				15:[MIN_BAL_06M<-0.312938154] yes=29,no=30,missing=29
+					29:leaf=-0.446251333
+					30:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-1.09538603] yes=55,no=56,missing=55
+						55:[BK12_MAX_CREDIT_AMT<-0.274193525] yes=87,no=88,missing=87
+							87:[MIN_R_BAL_BY_MAX_BAL_03M<-1.15222788] yes=121,no=122,missing=121
+								121:[CUR_BAL<-0.331751913] yes=153,no=154,missing=153
+									153:leaf=0.397376567
+									154:leaf=-0.328468293
+								122:leaf=0.452885062
+							88:leaf=-0.365801275
+						56:leaf=-0.414159089
+				16:[BK_DEUDA_CP<161.084991] yes=31,no=32,missing=31
+					31:leaf=-0.461022139
+					32:leaf=0.402554601
+			8:[NBK12_COMM_PCT_PLUS<-0.625] yes=17,no=18,missing=17
+				17:[R_BAL_BY_CRED_LIM<0.615101755] yes=33,no=34,missing=33
+					33:[MIN_D_CRED_LIM_TO_BAL_06M<1.92840719] yes=57,no=58,missing=57
+						57:[REVOLVENTE<-0.5] yes=89,no=90,missing=89
+							89:[MIN_D_CRED_LIM_TO_BAL_12M<-0.211350948] yes=123,no=124,missing=123
+								123:leaf=-0.501756132
+								124:[DS_OL_CL<-0.13663891] yes=155,no=156,missing=155
+									155:leaf=-0.382865548
+									156:[DS_CL<0.184581712] yes=185,no=186,missing=185
+										185:leaf=0.392513782
+										186:leaf=-0.354633003
+							90:leaf=-0.462704003
+						58:[MAX_R_BAL_BY_MAX_BAL_06M<-0.187998638] yes=91,no=92,missing=91
+							91:leaf=0.413680017
+							92:leaf=-0.310971975
+					34:[AVG_R_BAL_BY_CRED_LIM_06M<0.699475765] yes=59,no=60,missing=59
+						59:leaf=0.426480263
+						60:leaf=-0.408902109
+				18:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_06M<-0.150000006] yes=35,no=36,missing=35
+					35:leaf=-0.482506424
+					36:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.231557041] yes=61,no=62,missing=61
+						61:[BK12_NUM_TC_ACT<-0.13499999] yes=93,no=94,missing=93
+							93:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.466539204] yes=125,no=126,missing=125
+								125:leaf=0.445250779
+								126:[MAX_BAL_12M<1.34200573] yes=157,no=158,missing=157
+									157:leaf=-0.414553791
+									158:leaf=0.395348877
+							94:[MIN_D_CRED_LIM_TO_BAL_03M<-0.262554765] yes=127,no=128,missing=127
+								127:[MIN_D_CRED_LIM_TO_BAL_03M<-0.278657168] yes=159,no=160,missing=159
+									159:leaf=-0.37195158
+									160:leaf=0.45906198
+								128:[NBK12_DEUDA_TOT<0.48751837] yes=161,no=162,missing=161
+									161:leaf=-0.52370882
+									162:[NBK12_PCT_PROMT<0.72330606] yes=187,no=188,missing=187
+										187:leaf=0.486290157
+										188:leaf=-0.453550488
+						62:[MAX_BAL_06M<2.18838525] yes=95,no=96,missing=95
+							95:[DS_OL_CL<-0.425056756] yes=129,no=130,missing=129
+								129:leaf=-0.419663012
+								130:[MIN_R_BAL_BY_CRED_LIM_12M<-0.660447598] yes=163,no=164,missing=163
+									163:leaf=-0.381377518
+									164:[BK12_IND_QCRA<2.5] yes=189,no=190,missing=189
+										189:leaf=0.348928481
+										190:leaf=-0.366944194
+							96:leaf=-0.422562391
+		4:[MIN_R_BAL_BY_CRED_LIM_06M<0.535659492] yes=9,no=10,missing=9
+			9:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<0.313904226] yes=19,no=20,missing=19
+				19:[AVG_PND_MAS_PCT_VENC59_12M<0.0130780004] yes=37,no=38,missing=37
+					37:[DS_CL<0.614056408] yes=63,no=64,missing=63
+						63:[DEUDA_TOT<-0.659663916] yes=97,no=98,missing=97
+							97:[CUR_CRED_LIM<-0.365226418] yes=131,no=132,missing=131
+								131:leaf=0.41042605
+								132:leaf=-0.272714436
+							98:[MIN_R_BAL_BY_MAX_BAL_06M<0.173489481] yes=133,no=134,missing=133
+								133:[AVG_PND_MENOS_PCT_VENC29_12M<23.9536705] yes=165,no=166,missing=165
+									165:[DS_CL<-0.495379388] yes=191,no=192,missing=191
+										191:leaf=-0.260187685
+										192:leaf=-0.46509409
+									166:[AVG_PND_MENOS_PCT_VENC29_12M<24.9248238] yes=193,no=194,missing=193
+										193:leaf=0.40684098
+										194:leaf=-0.4240385
+								134:[BK12_DPD_PROM<2.5] yes=167,no=168,missing=167
+									167:[R_BAL_BY_CRED_LIM<0.622098207] yes=195,no=196,missing=195
+										195:leaf=-0.387143284
+										196:leaf=0.276989222
+									168:[AVG_PND_MENOS_PCT_VIGENTEH_12M<-0.0490115322] yes=197,no=198,missing=197
+										197:leaf=0.436831236
+										198:leaf=-0.385251284
+						64:[AVG_PND_MAS_AVG_HI_CALCAR_L_03M<0.191683501] yes=99,no=100,missing=99
+							99:leaf=-0.416661054
+							100:leaf=0.366526276
+					38:[CUR_BAL<-0.197746575] yes=65,no=66,missing=65
+						65:leaf=0.428989589
+						66:leaf=-0.250166893
+				20:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.264978319] yes=39,no=40,missing=39
+					39:[NBK12_NUM_CRED<-0.313470781] yes=67,no=68,missing=67
+						67:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_06M<0.0916665792] yes=101,no=102,missing=101
+							101:leaf=0.440512806
+							102:leaf=-0.287560701
+						68:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_06M<-0.287109584] yes=103,no=104,missing=103
+							103:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.28120482] yes=135,no=136,missing=135
+								135:leaf=-0.334620506
+								136:leaf=0.395583004
+							104:leaf=-0.470269829
+					40:[MAX_BAL_12M<0.496276915] yes=69,no=70,missing=69
+						69:[MIN_VIGENTEH_06M<-0.213275969] yes=105,no=106,missing=105
+							105:leaf=-0.451771468
+							106:[AVG_PND_MAS_VENC29_12M<3.52617097] yes=137,no=138,missing=137
+								137:[AVG_PND_MAS_VIGENTEH_03M<0.120397791] yes=169,no=170,missing=169
+									169:[AVG_AVG_HI_CALCAR_CEIL_03M<-0.0495497286] yes=199,no=200,missing=199
+										199:leaf=0.368948638
+										200:leaf=-0.293264955
+									170:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_06M<0.491084635] yes=201,no=202,missing=201
+										201:leaf=-0.383427352
+										202:leaf=0.371376038
+								138:leaf=-0.441582382
+						70:leaf=-0.468126893
+			10:[DEUDA_TOT<-0.323529422] yes=21,no=22,missing=21
+				21:[CUR_BAL<1.01609683] yes=41,no=42,missing=41
+					41:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.462934375] yes=71,no=72,missing=71
+						71:leaf=-0.522045851
+						72:[MIN_R_BAL_BY_MAX_BAL_06M<0.20328252] yes=107,no=108,missing=107
+							107:leaf=-0.430797577
+							108:[MIN_VIGENTEH_03M<-0.2997199] yes=139,no=140,missing=139
+								139:leaf=-0.470039129
+								140:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_03M<-0.668055534] yes=171,no=172,missing=171
+									171:[MAX_D_CRED_LIM_TO_BAL_03M<-0.297730267] yes=203,no=204,missing=203
+										203:leaf=0.452177912
+										204:leaf=-0.536730647
+									172:[BK12_MAX_CREDIT_AMT<-0.112903222] yes=205,no=206,missing=205
+										205:leaf=0.353355616
+										206:leaf=0.00515520945
+					42:leaf=-0.443310022
+				22:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_12M<-0.28320381] yes=43,no=44,missing=43
+					43:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.709578574] yes=73,no=74,missing=73
+						73:leaf=-0.526432216
+						74:[MS_OP<1.59523809] yes=109,no=110,missing=109
+							109:leaf=-0.269689947
+							110:leaf=0.429991961
+					44:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<-0.375405997] yes=75,no=76,missing=75
+						75:leaf=-0.491540283
+						76:[MAX_R_BAL_BY_CRED_LIM_12M<0.174078643] yes=111,no=112,missing=111
+							111:leaf=-0.48914364
+							112:[MAX_FD_CALCAR_FLOOR<0.635714293] yes=141,no=142,missing=141
+								141:[DS_OL_CL<-0.41559425] yes=173,no=174,missing=173
+									173:leaf=-0.407227159
+									174:[MIN_CRED_LIM_12M<1.92982459] yes=207,no=208,missing=207
+										207:leaf=0.326167703
+										208:leaf=-0.39043197
+								142:leaf=-0.49894771
+	2:[MAX_PCT_VENC59_12M<0.0108670369] yes=5,no=6,missing=5
+		5:[MIN_R_BAL_BY_MAX_BAL_03M<-0.498972476] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.22864199] yes=23,no=24,missing=23
+				23:leaf=-0.471707284
+				24:[AVG_PCT_VENC29_12M<9.66107368] yes=45,no=46,missing=45
+					45:[NUM_VENCIDO1MAS_12M<4] yes=77,no=78,missing=77
+						77:leaf=0.442608714
+						78:leaf=-0.386009306
+					46:leaf=-0.472285807
+			12:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<-0.325525463] yes=25,no=26,missing=25
+				25:[MIN_VIGENTEH_03M<-0.22857143] yes=47,no=48,missing=47
+					47:[NBK12_NUM_CRED<-0.274053812] yes=79,no=80,missing=79
+						79:leaf=-0.459272563
+						80:[AVG_PND_MAS_VENC29_03M<0.449999988] yes=113,no=114,missing=113
+							113:leaf=-0.348579794
+							114:[MIN_D_CRED_LIM_TO_BAL_06M<-0.235345542] yes=143,no=144,missing=143
+								143:leaf=0.457779199
+								144:[CUR_BAL<-0.295909226] yes=175,no=176,missing=175
+									175:leaf=0.408591509
+									176:leaf=-0.291627795
+					48:leaf=-0.513201177
+				26:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.984648228] yes=49,no=50,missing=49
+					49:leaf=-0.460173845
+					50:[BK12_NUM_EXP_PAIDONTIME<-0.590000033] yes=81,no=82,missing=81
+						81:leaf=-0.479966074
+						82:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.429749519] yes=115,no=116,missing=115
+							115:[MAX_R_BAL_BY_CRED_LIM_06M<0.170906052] yes=145,no=146,missing=145
+								145:[D_CRED_LIM_TO_BAL<-0.222354352] yes=177,no=178,missing=177
+									177:leaf=-0.520193994
+									178:[MIN_PCT_VIGENTEH_12M<-2.37475109] yes=209,no=210,missing=209
+										209:leaf=0.329736263
+										210:leaf=0.0395136625
+								146:leaf=-0.533870637
+							116:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-0.113753259] yes=147,no=148,missing=147
+								147:leaf=-0.482726604
+								148:[DEUDA_TOT<0.348739505] yes=179,no=180,missing=179
+									179:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.0311225299] yes=211,no=212,missing=211
+										211:leaf=-0.350525796
+										212:leaf=0.404212207
+									180:[NBK12_NUM_CRED<0.41886431] yes=213,no=214,missing=213
+										213:leaf=-0.579283476
+										214:leaf=0.258841664
+		6:[MS_OP<2.35714293] yes=13,no=14,missing=13
+			13:[AVG_PND_MAS_PCT_VENC30M_12M<0.00535050035] yes=27,no=28,missing=27
+				27:[DS_OL_CL<0.337623] yes=51,no=52,missing=51
+					51:leaf=-0.636209965
+					52:[DEUDA_TOT<-0.306722701] yes=83,no=84,missing=83
+						83:leaf=-0.558182001
+						84:[NUM_MAX_HI_CALCAR_FLOOR_12M<0.357142866] yes=117,no=118,missing=117
+							117:[AVG_AVG_HI_CALCAR_CEIL_06M<3.57692337] yes=149,no=150,missing=149
+								149:[AVG_AVG_HI_CALCAR_L_12M<-0.327859521] yes=181,no=182,missing=181
+									181:leaf=-0.342304111
+									182:leaf=0.450398564
+								150:leaf=-0.466665804
+							118:leaf=-0.471378893
+				28:[MIN_R_BAL_BY_MAX_BAL_03M<-3.50042987] yes=53,no=54,missing=53
+					53:leaf=-0.404136151
+					54:[AVG_PND_MENOS_PCT_VENC1M_12M<2.27809381] yes=85,no=86,missing=85
+						85:leaf=-0.451725811
+						86:[SUM_VENC89_06M<6463.5] yes=119,no=120,missing=119
+							119:[MIN_D_CRED_LIM_TO_BAL_12M<8.10134697] yes=151,no=152,missing=151
+								151:[MAX_PCT_VENC29_06M<692.070557] yes=183,no=184,missing=183
+									183:[AVG_MAX_HI_CALCAR_CEIL_12M<30.1994858] yes=215,no=216,missing=215
+										215:leaf=0.395378828
+										216:leaf=0.0785810724
+									184:leaf=-0.439643174
+								152:leaf=-0.352246523
+							120:leaf=-0.37682423
+			14:leaf=-0.391316533
+booster[2]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<29.9403] yes=1,no=2,missing=1
+	1:[NUM_VIGENTEH_12M<-11.5] yes=3,no=4,missing=3
+		3:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.632487357] yes=7,no=8,missing=7
+			7:[MONTHS_ON_FILE_BANKING<-0.5] yes=15,no=16,missing=15
+				15:[DEUDA_TOT<-0.0672268942] yes=29,no=30,missing=29
+					29:[MS_OP<0.833333373] yes=57,no=58,missing=57
+						57:[MIN_R_BAL_BY_MAX_BAL_03M<-1.84629822] yes=89,no=90,missing=89
+							89:leaf=-0.285417795
+							90:[MS_OP<0] yes=129,no=130,missing=129
+								129:[DS_CL<-0.476896882] yes=177,no=178,missing=177
+									177:leaf=0.334273458
+									178:leaf=-0.280778825
+								130:leaf=0.390535563
+						58:leaf=-0.327391326
+					30:leaf=-0.36046043
+				16:[BK_DEUDA_CP<161.084991] yes=31,no=32,missing=31
+					31:leaf=-0.397678584
+					32:leaf=0.344251096
+			8:[BK_DEUDA_CP<0.800000012] yes=17,no=18,missing=17
+				17:[AVG_D_CRED_LIM_TO_BAL_12M<-0.261086643] yes=33,no=34,missing=33
+					33:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-0.0727659315] yes=59,no=60,missing=59
+						59:[MS_OP<2] yes=91,no=92,missing=91
+							91:leaf=-0.487722427
+							92:leaf=0.350961477
+						60:[MIN_R_BAL_BY_CRED_LIM_12M<0.872871995] yes=93,no=94,missing=93
+							93:[MAX_R_BAL_BY_MAX_BAL_03M<-1.34931517] yes=131,no=132,missing=131
+								131:leaf=-0.4031896
+								132:[BK_IND_PMOR<-0.0663076937] yes=179,no=180,missing=179
+									179:[DEUDA_TOT<-0.231092438] yes=229,no=230,missing=229
+										229:leaf=0.365465641
+										230:leaf=0.165646479
+									180:[R_BAL_BY_CRED_LIM<0.608965099] yes=231,no=232,missing=231
+										231:leaf=-0.189770117
+										232:leaf=0.329727143
+							94:leaf=-0.390696555
+					34:[NBK12_DEUDA_CP<-0.121176422] yes=61,no=62,missing=61
+						61:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.262567878] yes=95,no=96,missing=95
+							95:leaf=-0.422940612
+							96:leaf=-0.658054113
+						62:[BK_IND_PMOR<0.322153628] yes=97,no=98,missing=97
+							97:[MS_OP<-0.59523809] yes=133,no=134,missing=133
+								133:leaf=-0.398078054
+								134:[DS_CL<-0.422422171] yes=181,no=182,missing=181
+									181:leaf=-0.375577778
+									182:[MAX_R_BAL_BY_MAX_BAL_03M<-2.0120194] yes=233,no=234,missing=233
+										233:leaf=-0.338897735
+										234:leaf=0.306906313
+							98:[BK_DEUDA_CP<0.349999994] yes=135,no=136,missing=135
+								135:leaf=-0.511454105
+								136:[MIN_R_BAL_BY_CRED_LIM_12M<0.611631513] yes=183,no=184,missing=183
+									183:leaf=-0.25597769
+									184:leaf=0.350961477
+				18:[MIN_R_BAL_BY_MAX_BAL_06M<0.400322646] yes=35,no=36,missing=35
+					35:[BK12_NUM_TC_ACT<-0.674999952] yes=63,no=64,missing=63
+						63:leaf=-0.394591004
+						64:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-1.61189437] yes=99,no=100,missing=99
+							99:leaf=-0.303296059
+							100:[DS_OL_CL<0.746593475] yes=137,no=138,missing=137
+								137:[BK12_MAX_CREDIT_AMT<0.0483870953] yes=185,no=186,missing=185
+									185:[MAX_BAL_06M<-0.311899662] yes=235,no=236,missing=235
+										235:leaf=0.21536085
+										236:leaf=0.399391502
+									186:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.135046974] yes=237,no=238,missing=237
+										237:leaf=-0.376987457
+										238:leaf=0.352144301
+								138:[D_CRED_LIM_TO_BAL<-0.316260993] yes=187,no=188,missing=187
+									187:leaf=0.350961477
+									188:leaf=-0.445578367
+					36:leaf=-0.539865673
+		4:[R_BAL_BY_CRED_LIM<0.315053016] yes=9,no=10,missing=9
+			9:[NUM_VENC59_12M<1.5] yes=19,no=20,missing=19
+				19:[MIN_R_BAL_BY_MAX_BAL_03M<-0.0369649455] yes=37,no=38,missing=37
+					37:[NUM_VENC89_06M<1.5] yes=65,no=66,missing=65
+						65:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<-1.61849761] yes=101,no=102,missing=101
+							101:[MIN_R_BAL_BY_CRED_LIM_03M<-1.13415122] yes=139,no=140,missing=139
+								139:leaf=-0.347515672
+								140:leaf=0.348824263
+							102:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_03M<-0.278841734] yes=141,no=142,missing=141
+								141:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_03M<-0.278888226] yes=189,no=190,missing=189
+									189:leaf=-0.366427213
+									190:leaf=0.339868307
+								142:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.7435565] yes=191,no=192,missing=191
+									191:leaf=-0.406073093
+									192:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.75938439] yes=239,no=240,missing=239
+										239:leaf=0.342311919
+										240:leaf=-0.388687789
+						66:leaf=0.347779751
+					38:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_06M<1.14501381] yes=67,no=68,missing=67
+						67:[NUM_VENC29_12M<2.5] yes=103,no=104,missing=103
+							103:[AVG_R_BAL_BY_MAX_BAL_06M<0.423197687] yes=143,no=144,missing=143
+								143:[DEUDA_TOT<1.31512606] yes=193,no=194,missing=193
+									193:leaf=-0.41231361
+									194:[REVOLVENTE<-0.5] yes=241,no=242,missing=241
+										241:leaf=0.342311919
+										242:leaf=-0.247874454
+								144:[MIN_R_BAL_BY_MAX_BAL_06M<0.368621945] yes=195,no=196,missing=195
+									195:[MIN_D_CRED_LIM_TO_BAL_12M<0.264582157] yes=243,no=244,missing=243
+										243:leaf=-0.280043274
+										244:leaf=0.426755846
+									196:[DS_CL<-0.470573932] yes=245,no=246,missing=245
+										245:leaf=0.262543797
+										246:leaf=-0.406118304
+							104:[AVG_VENCIDO1MAS_12M<0.880681574] yes=145,no=146,missing=145
+								145:[DS_CL<0.42169261] yes=197,no=198,missing=197
+									197:leaf=-0.207810029
+									198:leaf=0.370929301
+								146:leaf=-0.353856087
+						68:[MIN_R_BAL_BY_MAX_BAL_03M<0.147902951] yes=105,no=106,missing=105
+							105:[MONTHS_ON_FILE_BANKING<-0.5] yes=147,no=148,missing=147
+								147:[DS_CL<0.230058372] yes=199,no=200,missing=199
+									199:leaf=-0.279478729
+									200:leaf=0.406861663
+								148:leaf=-0.344812453
+							106:leaf=-0.386278093
+				20:[MAX_CRED_LIM_12M<-0.24444446] yes=39,no=40,missing=39
+					39:leaf=0.359809846
+					40:leaf=-0.366068602
+			10:[DEUDA_TOT<-0.357142866] yes=21,no=22,missing=21
+				21:[MAX_R_BAL_BY_CRED_LIM_06M<0.464465022] yes=41,no=42,missing=41
+					41:[MONTHS_ON_FILE_BANKING<-0.5] yes=69,no=70,missing=69
+						69:[MIN_D_CRED_LIM_TO_BAL_12M<-0.193652511] yes=107,no=108,missing=107
+							107:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_12M<-0.298174679] yes=149,no=150,missing=149
+								149:[AVG_PND_MAS_BAL_03M<-0.263513207] yes=201,no=202,missing=201
+									201:[AVG_PND_MENOS_VIGENTEH_03M<-0.346495032] yes=247,no=248,missing=247
+										247:leaf=0.160784379
+										248:leaf=-0.584325433
+									202:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.299087137] yes=249,no=250,missing=249
+										249:leaf=-0.449390054
+										250:leaf=0.373187482
+								150:leaf=-0.451401055
+							108:[MAX_AVG_HI_CALCAR_L_06M<0.125] yes=151,no=152,missing=151
+								151:[MIN_VIGENTEH_03M<-0.28039217] yes=203,no=204,missing=203
+									203:leaf=-0.338175148
+									204:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_12M<0.138030931] yes=251,no=252,missing=251
+										251:leaf=0.441318929
+										252:leaf=0.179917485
+								152:leaf=-0.359302968
+						70:[MAX_R_BAL_BY_MAX_BAL_12M<-0.415668935] yes=109,no=110,missing=109
+							109:[AVG_FD_CALCAR_L<1.5] yes=153,no=154,missing=153
+								153:leaf=-0.293646783
+								154:leaf=0.395997196
+							110:[MAX_BAL_12M<-0.342981935] yes=155,no=156,missing=155
+								155:[MIN_D_CRED_LIM_TO_BAL_06M<-0.230651587] yes=205,no=206,missing=205
+									205:[MIN_D_CRED_LIM_TO_BAL_03M<-0.257098973] yes=253,no=254,missing=253
+										253:leaf=-0.327899873
+										254:leaf=0.392736316
+									206:leaf=-0.394353986
+								156:[NBK12_COMM_PCT_PLUS<0.875] yes=207,no=208,missing=207
+									207:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.226783946] yes=255,no=256,missing=255
+										255:leaf=-0.58353442
+										256:leaf=-0.409188569
+									208:[REVOLVENTE<-0.5] yes=257,no=258,missing=257
+										257:leaf=0.372597873
+										258:leaf=-0.345412552
+					42:[DS_OL_CL<-0.414647996] yes=71,no=72,missing=71
+						71:leaf=-0.379559249
+						72:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.331540853] yes=111,no=112,missing=111
+							111:leaf=-0.356436223
+							112:[DEUDA_TOT<-0.642857194] yes=157,no=158,missing=157
+								157:leaf=-0.376241803
+								158:[BK_IND_PMOR<0.433692276] yes=209,no=210,missing=209
+									209:[NBK12_NUM_CRED<-0.301921725] yes=259,no=260,missing=259
+										259:leaf=-0.262092054
+										260:leaf=0.389171928
+									210:leaf=-0.281807452
+				22:[MAX_R_BAL_BY_MAX_BAL_03M<-0.312810868] yes=43,no=44,missing=43
+					43:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.180044025] yes=73,no=74,missing=73
+						73:leaf=-0.403000414
+						74:[MIN_R_BAL_BY_MAX_BAL_06M<0.308998734] yes=113,no=114,missing=113
+							113:[MS_OP<0.90476191] yes=159,no=160,missing=159
+								159:[CUR_BAL<2.56745601] yes=211,no=212,missing=211
+									211:[NBK12_PCT_SAT<0.0124193374] yes=261,no=262,missing=261
+										261:leaf=0.249772713
+										262:leaf=0.433916301
+									212:leaf=-0.209137335
+								160:leaf=-0.293214887
+							114:leaf=-0.357001454
+					44:[AVG_PND_MAS_AVG_HI_CALCAR_L_12M<0.740860879] yes=75,no=76,missing=75
+						75:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.709578574] yes=115,no=116,missing=115
+							115:[MIN_D_CRED_LIM_TO_BAL_06M<-0.282962263] yes=161,no=162,missing=161
+								161:[MIN_D_CRED_LIM_TO_BAL_03M<-0.306683242] yes=213,no=214,missing=213
+									213:leaf=-0.392896295
+									214:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.349846125] yes=263,no=264,missing=263
+										263:leaf=0.342685878
+										264:leaf=-0.313095748
+								162:[BK_IND_PMOR<-0.416197687] yes=215,no=216,missing=215
+									215:[MIN_D_CRED_LIM_TO_BAL_03M<-0.203343779] yes=265,no=266,missing=265
+										265:leaf=-0.358692229
+										266:leaf=0.398988187
+									216:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_03M<0.515053988] yes=267,no=268,missing=267
+										267:leaf=-0.441738516
+										268:leaf=-0.158790335
+							116:leaf=0.303900599
+						76:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<1.25209332] yes=117,no=118,missing=117
+							117:[AVG_VENCIDO1MAS_12M<1.21732926] yes=163,no=164,missing=163
+								163:[MIN_D_CRED_LIM_TO_BAL_12M<-0.078247115] yes=217,no=218,missing=217
+									217:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_12M<-0.28295812] yes=269,no=270,missing=269
+										269:leaf=-0.315194875
+										270:leaf=0.382488877
+									218:leaf=-0.305465609
+								164:leaf=-0.355742335
+							118:leaf=-0.415823817
+	2:[AVG_PCT_VENC59_03M<0.00840999931] yes=5,no=6,missing=5
+		5:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.0565126091] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<0.352715075] yes=23,no=24,missing=23
+				23:[MAX_R_BAL_BY_MAX_BAL_12M<-15.2252464] yes=45,no=46,missing=45
+					45:leaf=0.305443585
+					46:leaf=-0.43530637
+				24:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.164185941] yes=47,no=48,missing=47
+					47:[MIN_PCT_VIGENTEH_06M<-9.29450607] yes=77,no=78,missing=77
+						77:[MAX_PCT_VENC29_03M<0.0962301642] yes=119,no=120,missing=119
+							119:[DEUDA_TOT<0.949579835] yes=165,no=166,missing=165
+								165:[AVG_R_BAL_BY_MAX_BAL_03M<-2.18455958] yes=219,no=220,missing=219
+									219:[MIN_D_CRED_LIM_TO_BAL_03M<-0.292176306] yes=271,no=272,missing=271
+										271:leaf=0.337613672
+										272:leaf=-0.408929676
+									220:[MIN_R_BAL_BY_MAX_BAL_03M<-0.094859615] yes=273,no=274,missing=273
+										273:leaf=0.324321508
+										274:leaf=-0.405429333
+								166:leaf=-0.455119312
+							120:[DS_OL_CL<-0.279901594] yes=167,no=168,missing=167
+								167:leaf=0.305963159
+								168:leaf=-0.507021248
+						78:[DS_OL_CL<0.706093848] yes=121,no=122,missing=121
+							121:leaf=-0.536048949
+							122:[MS_OP<1.21428573] yes=169,no=170,missing=169
+								169:leaf=0.383027643
+								170:leaf=-0.317764342
+					48:leaf=-0.570986986
+			12:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.432155371] yes=25,no=26,missing=25
+				25:[AVG_AVG_HI_CALCAR_CEIL_12M<-0.633422494] yes=49,no=50,missing=49
+					49:[AVG_PND_MAS_AVG_HI_CALCAR_L_12M<-0.905494571] yes=79,no=80,missing=79
+						79:leaf=-0.36689502
+						80:leaf=0.31775856
+					50:leaf=-0.569444895
+				26:[DEUDA_TOT<1.24789917] yes=51,no=52,missing=51
+					51:[NBK12_PCT_60PLUS<1.0999999] yes=81,no=82,missing=81
+						81:[AVG_PCT_VENC29_03M<0.114661999] yes=123,no=124,missing=123
+							123:[MS_OP<-0.690476179] yes=171,no=172,missing=171
+								171:leaf=-0.402104706
+								172:[MIN_R_BAL_BY_CRED_LIM_03M<0.717033863] yes=221,no=222,missing=221
+									221:[AVG_PND_MAS_PCT_VENC59_06M<0.0144020002] yes=275,no=276,missing=275
+										275:leaf=0.324497402
+										276:leaf=-0.600434542
+									222:leaf=-0.531284273
+							124:leaf=-0.56454289
+						82:[R_BAL_BY_CRED_LIM<0.623734355] yes=125,no=126,missing=125
+							125:[AVG_PND_MAS_PCT_VENC59_12M<0.00170550006] yes=173,no=174,missing=173
+								173:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_03M<-0.260006011] yes=223,no=224,missing=223
+									223:leaf=-0.561692834
+									224:[AVG_VENCIDO1MAS_12M<5.02840805] yes=277,no=278,missing=277
+										277:leaf=-0.478393167
+										278:leaf=0.215048641
+								174:leaf=-0.700531065
+							126:leaf=0.414905071
+					52:leaf=-0.562189519
+		6:[MIN_PCT_VENC60M_06M<0.0578221828] yes=13,no=14,missing=13
+			13:[AVG_R_BAL_BY_MAX_BAL_03M<-1.38595486] yes=27,no=28,missing=27
+				27:[AVG_PCT_VENC30M_03M<0.237697512] yes=53,no=54,missing=53
+					53:leaf=-0.557305396
+					54:[AVG_PCT_VIGENTEH_03M<-4515.8125] yes=83,no=84,missing=83
+						83:leaf=-0.256869614
+						84:leaf=0.38519755
+				28:[MIN_VENCIDO1MAS_12M<79.5] yes=55,no=56,missing=55
+					55:[MIN_R_BAL_BY_MAX_BAL_06M<0.418634892] yes=85,no=86,missing=85
+						85:[AVG_PND_MAS_PCT_VIGENTEH_06M<-4.97191525] yes=127,no=128,missing=127
+							127:[MAX_CRED_LIM_12M<-0.373148143] yes=175,no=176,missing=175
+								175:[MAX_PCT_VENC29_06M<27.0995255] yes=225,no=226,missing=225
+									225:leaf=0.3718099
+									226:leaf=-0.639949799
+								176:[AVG_PND_MENOS_VENCIDO30MAS_03M<5757.7998] yes=227,no=228,missing=227
+									227:[BK12_NUM_EXP_PAIDONTIME<-0.810000002] yes=279,no=280,missing=279
+										279:leaf=0.0847468823
+										280:leaf=0.36480391
+									228:leaf=-0.329648674
+							128:leaf=-0.384170383
+						86:leaf=-0.364401758
+					56:[D_CRED_LIM_TO_BAL<-0.397071928] yes=87,no=88,missing=87
+						87:leaf=0.344329119
+						88:leaf=-0.668294311
+			14:leaf=-0.568333209
+booster[3]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<36.3507462] yes=1,no=2,missing=1
+	1:[AVG_R_BAL_BY_CRED_LIM_12M<0.350641727] yes=3,no=4,missing=3
+		3:[AVG_FD_CALCAR_CEIL<6.34920597] yes=7,no=8,missing=7
+			7:[MAX_R_BAL_BY_CRED_LIM_03M<0.555419266] yes=15,no=16,missing=15
+				15:[DS_CL<0.614056408] yes=31,no=32,missing=31
+					31:[AVG_PND_MAS_PCT_VENC59_12M<0.00604599994] yes=53,no=54,missing=53
+						53:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_12M<2.76967764] yes=79,no=80,missing=79
+							79:[DEUDA_TOT_CP<0.75] yes=117,no=118,missing=117
+								117:[DEUDA_TOT<-0.659663916] yes=157,no=158,missing=157
+									157:[MS_OP<0.119047627] yes=201,no=202,missing=201
+										201:leaf=-0.358504534
+										202:leaf=0.170422137
+									158:[BK12_PCT_90PLUS<-0.210000008] yes=203,no=204,missing=203
+										203:leaf=0.0887835994
+										204:leaf=-0.350332558
+								118:[AVG_R_BAL_BY_CRED_LIM_06M<0.070776552] yes=159,no=160,missing=159
+									159:[DS_CL<-0.471303523] yes=205,no=206,missing=205
+										205:leaf=0.110687405
+										206:leaf=-0.374192297
+									160:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_06M<-0.0105105173] yes=207,no=208,missing=207
+										207:leaf=-0.348415345
+										208:leaf=0.124348119
+							80:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<1.12553883] yes=119,no=120,missing=119
+								119:[MAX_MAX_HI_CALCAR_L_12M<1.75] yes=161,no=162,missing=161
+									161:leaf=0.330940902
+									162:leaf=-0.256215572
+								120:leaf=-0.34235692
+						54:[NBK12_COMM_PCT_PLUS<-0.375] yes=81,no=82,missing=81
+							81:leaf=0.319991022
+							82:leaf=-0.272371173
+					32:[MIN_R_BAL_BY_MAX_BAL_03M<-0.11664439] yes=55,no=56,missing=55
+						55:[MAX_R_BAL_BY_CRED_LIM_06M<-2.44145584] yes=83,no=84,missing=83
+							83:leaf=0.286379874
+							84:leaf=-0.381848514
+						56:[D_CRED_LIM_TO_BAL<-0.113088131] yes=85,no=86,missing=85
+							85:[BK12_MAX_CREDIT_AMT<-0.0967741907] yes=121,no=122,missing=121
+								121:[R_BAL_BY_CRED_LIM<-0.269031048] yes=163,no=164,missing=163
+									163:leaf=-0.214833573
+									164:[MIN_R_BAL_BY_CRED_LIM_12M<0.289419115] yes=209,no=210,missing=209
+										209:leaf=0.367930382
+										210:leaf=0.168564618
+								122:leaf=-0.294235438
+							86:[MAX_AVG_HI_CALCAR_CEIL_12M<-0.234848499] yes=123,no=124,missing=123
+								123:leaf=0.296322972
+								124:leaf=-0.404964805
+				16:[AVG_PND_MAS_BAL_03M<-0.30796802] yes=33,no=34,missing=33
+					33:leaf=-0.326450735
+					34:leaf=0.338672101
+			8:[MAX_AVG_HI_CALCAR_L_03M<0.5] yes=17,no=18,missing=17
+				17:[AVG_R_BAL_BY_MAX_BAL_12M<-0.0132896993] yes=35,no=36,missing=35
+					35:[DS_OL_CL<0.843111277] yes=57,no=58,missing=57
+						57:[MAX_R_BAL_BY_CRED_LIM_03M<0.249923736] yes=87,no=88,missing=87
+							87:[MAX_R_BAL_BY_MAX_BAL_06M<-2.94909668] yes=125,no=126,missing=125
+								125:[BK12_PCT_PROMT<0.0199999996] yes=165,no=166,missing=165
+									165:leaf=-0.272403598
+									166:leaf=0.28139025
+								126:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-0.120120779] yes=167,no=168,missing=167
+									167:leaf=0.34601599
+									168:leaf=0.169542834
+							88:leaf=-0.257963359
+						58:leaf=-0.312351078
+					36:leaf=-0.401191384
+				18:[MONTHS_ON_FILE_BANKING<-0.5] yes=37,no=38,missing=37
+					37:[NBK12_NUM_CRED<0.51641953] yes=59,no=60,missing=59
+						59:leaf=-0.328300655
+						60:[MIN_VIGENTEH_03M<0.510084033] yes=89,no=90,missing=89
+							89:leaf=0.349106461
+							90:leaf=-0.240164235
+					38:leaf=-0.394110054
+		4:[DS_CL<0.575875521] yes=9,no=10,missing=9
+			9:[AVG_D_CRED_LIM_TO_BAL_06M<-0.0545306876] yes=19,no=20,missing=19
+				19:[NUM_VIGENTEH_12M<-3.5] yes=39,no=40,missing=39
+					39:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_12M<0.562056661] yes=61,no=62,missing=61
+						61:[AVG_PND_MENOS_VIGENTEH_12M<-0.113378145] yes=91,no=92,missing=91
+							91:[MIN_R_BAL_BY_CRED_LIM_03M<0.500556469] yes=127,no=128,missing=127
+								127:leaf=-0.396669984
+								128:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.276246071] yes=169,no=170,missing=169
+									169:leaf=0.381144851
+									170:leaf=-0.214500293
+							92:[MIN_D_CRED_LIM_TO_BAL_06M<-0.22982046] yes=129,no=130,missing=129
+								129:leaf=-0.30203414
+								130:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<0.424897462] yes=171,no=172,missing=171
+									171:[CUR_BAL<-0.249989867] yes=211,no=212,missing=211
+										211:leaf=0.0848810971
+										212:leaf=0.342455596
+									172:leaf=-0.243369266
+						62:[AVG_R_BAL_BY_CRED_LIM_12M<0.734419405] yes=93,no=94,missing=93
+							93:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_12M<0.59713459] yes=131,no=132,missing=131
+								131:leaf=-0.505904615
+								132:[MIN_D_CRED_LIM_TO_BAL_03M<-0.257295489] yes=173,no=174,missing=173
+									173:leaf=-0.436031073
+									174:[DS_CL<0.184581712] yes=213,no=214,missing=213
+										213:leaf=0.322145522
+										214:leaf=-0.330800176
+							94:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.70784688] yes=133,no=134,missing=133
+								133:[MAX_D_CRED_LIM_TO_BAL_03M<-0.298817754] yes=175,no=176,missing=175
+									175:[BK12_MAX_CREDIT_AMT<0.145161286] yes=215,no=216,missing=215
+										215:leaf=-0.34008193
+										216:leaf=0.312254637
+									176:[MIN_D_CRED_LIM_TO_BAL_03M<-0.259212494] yes=217,no=218,missing=217
+										217:leaf=0.333107382
+										218:leaf=-0.0321728848
+								134:leaf=-0.439529419
+					40:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<0.60003078] yes=63,no=64,missing=63
+						63:[NBK12_PCT_PROMT<-0.0395649225] yes=95,no=96,missing=95
+							95:leaf=-0.405851692
+							96:[DEUDA_TOT<-0.0462184884] yes=135,no=136,missing=135
+								135:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_12M<0.565868378] yes=177,no=178,missing=177
+									177:[AVG_R_BAL_BY_MAX_BAL_03M<0.161518157] yes=219,no=220,missing=219
+										219:leaf=-0.33916977
+										220:leaf=0.260031819
+									178:leaf=-0.411295772
+								136:leaf=-0.406344742
+						64:[MAX_FD_CALCAR_FLOOR<0.797619045] yes=97,no=98,missing=97
+							97:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.227598384] yes=137,no=138,missing=137
+								137:[MAX_R_BAL_BY_CRED_LIM_06M<0.409061044] yes=179,no=180,missing=179
+									179:leaf=0.284907967
+									180:leaf=-0.416925222
+								138:[AVG_D_CRED_LIM_TO_BAL_06M<-0.316887796] yes=181,no=182,missing=181
+									181:leaf=-0.34202984
+									182:[DS_OL_CL<-0.419947028] yes=221,no=222,missing=221
+										221:leaf=-0.315721005
+										222:leaf=0.238899425
+							98:leaf=-0.437043518
+				20:[DEUDA_TOT_CP<-1.75] yes=41,no=42,missing=41
+					41:leaf=0.278029263
+					42:leaf=-0.393717617
+			10:[BK12_IND_QCRA<1.5] yes=21,no=22,missing=21
+				21:[AVG_PND_MAS_AVG_HI_CALCAR_L_03M<-0.00709953066] yes=43,no=44,missing=43
+					43:[AVG_MAX_HI_CALCAR_L_06M<-0.792207956] yes=65,no=66,missing=65
+						65:[MAX_AVG_HI_CALCAR_L_06M<-0.583333373] yes=99,no=100,missing=99
+							99:leaf=-0.259063482
+							100:leaf=0.392989159
+						66:leaf=-0.402664185
+					44:[MAX_R_BAL_BY_CRED_LIM_03M<0.560191393] yes=67,no=68,missing=67
+						67:[AVG_R_BAL_BY_CRED_LIM_06M<0.706534505] yes=101,no=102,missing=101
+							101:[MIN_R_BAL_BY_MAX_BAL_06M<0.198914558] yes=139,no=140,missing=139
+								139:[R_BAL_BY_CRED_LIM<0.206479907] yes=183,no=184,missing=183
+									183:[DEUDA_TOT<-0.14705883] yes=223,no=224,missing=223
+										223:leaf=0.310266405
+										224:leaf=-0.322701842
+									184:[NUM_VIGENTEH_03M<-2.5] yes=225,no=226,missing=225
+										225:leaf=-0.769738674
+										226:leaf=-0.255686283
+								140:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.140206009] yes=185,no=186,missing=185
+									185:leaf=-0.463982701
+									186:[MIN_CRED_LIM_12M<1.0544014] yes=227,no=228,missing=227
+										227:leaf=0.295027345
+										228:leaf=-0.290131837
+							102:leaf=-0.508503139
+						68:[MIN_R_BAL_BY_MAX_BAL_03M<-0.454929411] yes=103,no=104,missing=103
+							103:leaf=0.185730875
+							104:leaf=0.377944052
+				22:leaf=-0.395461917
+	2:[MAX_PCT_VENC59_12M<0.0158671327] yes=5,no=6,missing=5
+		5:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.0565126091] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<0.352715075] yes=23,no=24,missing=23
+				23:leaf=-0.373922348
+				24:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_12M<0.606479585] yes=45,no=46,missing=45
+					45:[MAX_R_BAL_BY_MAX_BAL_06M<-1.20143533] yes=69,no=70,missing=69
+						69:[AVG_PND_MENOS_PCT_VENC29_03M<0.00788599998] yes=105,no=106,missing=105
+							105:[CUR_BAL<1.10002947] yes=141,no=142,missing=141
+								141:leaf=-0.360558152
+								142:leaf=0.316708237
+							106:leaf=0.358715862
+						70:leaf=-0.302645594
+					46:[AVG_PND_MENOS_PCT_VENC29_06M<104.39045] yes=71,no=72,missing=71
+						71:[AVG_PND_MENOS_VENCIDO1MAS_03M<242.373016] yes=107,no=108,missing=107
+							107:[CUR_BAL<-0.329954624] yes=143,no=144,missing=143
+								143:leaf=0.298802733
+								144:leaf=-0.42619288
+							108:[NUM_VENCIDO30MAS_12M<7.5] yes=145,no=146,missing=145
+								145:[AVG_PND_MAS_PCT_VENC29_12M<25.7485962] yes=187,no=188,missing=187
+									187:[AVG_PND_MENOS_PCT_VIGENTEH_12M<-1.35348022] yes=229,no=230,missing=229
+										229:leaf=0.376221925
+										230:leaf=0.157062441
+									188:leaf=-0.221688986
+								146:leaf=-0.353142411
+						72:leaf=-0.491217405
+			12:[MIN_D_CRED_LIM_TO_BAL_12M<1.73815894] yes=25,no=26,missing=25
+				25:[MS_OP<-0.690476179] yes=47,no=48,missing=47
+					47:leaf=-0.371659547
+					48:[MAX_VENC29_03M<3351.5] yes=73,no=74,missing=73
+						73:[AVG_PND_MAS_VENC29_03M<0.949999988] yes=109,no=110,missing=109
+							109:[AVG_PND_MENOS_PCT_VENC90M_12M<0.835070491] yes=147,no=148,missing=147
+								147:[MAX_R_BAL_BY_CRED_LIM_03M<0.436253756] yes=189,no=190,missing=189
+									189:leaf=-0.586270154
+									190:[MAX_R_BAL_BY_CRED_LIM_03M<0.454340041] yes=231,no=232,missing=231
+										231:leaf=0.342175961
+										232:leaf=-0.234607399
+								148:leaf=0.354576379
+							110:[MIN_R_BAL_BY_MAX_BAL_06M<-0.54914397] yes=149,no=150,missing=149
+								149:leaf=-0.471781015
+								150:[AVG_PND_MAS_PCT_VENC59_12M<0.0022799999] yes=191,no=192,missing=191
+									191:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.676173568] yes=233,no=234,missing=233
+										233:leaf=0.224158242
+										234:leaf=0.359106004
+									192:leaf=-0.443390936
+						74:leaf=-0.449731559
+				26:leaf=-0.473733604
+		6:[DEUDA_TOT<0.415966392] yes=13,no=14,missing=13
+			13:[BK12_MAX_CREDIT_AMT<3.82258058] yes=27,no=28,missing=27
+				27:[BK24_IND_EXP<0.830000043] yes=49,no=50,missing=49
+					49:[AVG_PCT_VENC59_12M<0.105929002] yes=75,no=76,missing=75
+						75:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_06M<0.0611107945] yes=111,no=112,missing=111
+							111:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.0788526833] yes=151,no=152,missing=151
+								151:[MS_OP<0.666666687] yes=193,no=194,missing=193
+									193:[AVG_PND_MAS_PCT_VIGENTEH_12M<-2.13136482] yes=235,no=236,missing=235
+										235:leaf=0.29094258
+										236:leaf=-0.429145157
+									194:leaf=-0.467600316
+								152:leaf=-0.533337951
+							112:[AVG_R_BAL_BY_MAX_BAL_03M<-1.35901356] yes=153,no=154,missing=153
+								153:[AVG_PND_MENOS_BAL_03M<-0.223889872] yes=195,no=196,missing=195
+									195:leaf=-0.442616373
+									196:[MIN_AVG_HI_CALCAR_L_06M<1.625] yes=237,no=238,missing=237
+										237:leaf=0.319098175
+										238:leaf=-0.354978293
+								154:[MIN_VENC89_03M<11.5] yes=197,no=198,missing=197
+									197:[AVG_PND_MAS_PCT_VENC30M_12M<0.00387199991] yes=239,no=240,missing=239
+										239:leaf=0.0556740165
+										240:leaf=0.316844791
+									198:leaf=-0.448682159
+						76:leaf=-0.428363025
+					50:leaf=-0.518514633
+				28:leaf=-0.462388068
+			14:[AVG_AVG_HI_CALCAR_FLOOR_12M<13.4647579] yes=29,no=30,missing=29
+				29:[BK12_IND_QCRA<2.5] yes=51,no=52,missing=51
+					51:[BK12_DPD_PROM<1.5] yes=77,no=78,missing=77
+						77:[AVG_PND_MENOS_CRED_LIM_12M<1.69671392] yes=113,no=114,missing=113
+							113:[MAX_D_CRED_LIM_TO_BAL_03M<-0.293488085] yes=155,no=156,missing=155
+								155:leaf=-0.490148365
+								156:[NUM_MAX_HI_CALCAR_FLOOR_12M<-0.5] yes=199,no=200,missing=199
+									199:leaf=-0.432887554
+									200:[MIN_PCT_VENC60M_12M<0.0517760888] yes=241,no=242,missing=241
+										241:leaf=0.29722771
+										242:leaf=-0.399625689
+							114:leaf=-0.501173019
+						78:[CUR_BAL<2.93553519] yes=115,no=116,missing=115
+							115:leaf=-0.700313866
+							116:leaf=0.314844608
+					52:leaf=-0.512316883
+				30:leaf=-0.636127591
+booster[4]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<75.8880615] yes=1,no=2,missing=1
+	1:[AVG_R_BAL_BY_CRED_LIM_12M<0.350641727] yes=3,no=4,missing=3
+		3:[AVG_FD_CALCAR_CEIL<8.38095284] yes=7,no=8,missing=7
+			7:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_12M<-0.247535095] yes=15,no=16,missing=15
+				15:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_03M<0.298412859] yes=29,no=30,missing=29
+					29:leaf=-0.351579547
+					30:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_03M<0.376190484] yes=49,no=50,missing=49
+						49:[MAX_MAX_HI_CALCAR_L_06M<0.166666672] yes=75,no=76,missing=75
+							75:leaf=0.317013979
+							76:leaf=-0.205823228
+						50:leaf=-0.342126667
+				16:[AVG_R_BAL_BY_MAX_BAL_03M<-0.171278358] yes=31,no=32,missing=31
+					31:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.295349836] yes=51,no=52,missing=51
+						51:[AVG_PND_MENOS_VENCIDO1MAS_06M<16.6128082] yes=77,no=78,missing=77
+							77:[MIN_D_CRED_LIM_TO_BAL_03M<-0.255431592] yes=109,no=110,missing=109
+								109:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.107529983] yes=145,no=146,missing=145
+									145:leaf=-0.31940189
+									146:[MAX_BAL_03M<-0.313768327] yes=187,no=188,missing=187
+										187:leaf=0.330634207
+										188:leaf=0.150394708
+								110:[AVG_PND_MAS_PCT_VENC29_03M<0.00473000016] yes=147,no=148,missing=147
+									147:[MAX_R_BAL_BY_MAX_BAL_12M<-6.17447329] yes=189,no=190,missing=189
+										189:leaf=-0.187861592
+										190:leaf=-0.347762644
+									148:leaf=0.182073757
+							78:[BK_IND_PMOR<-0.402846158] yes=111,no=112,missing=111
+								111:leaf=0.301741153
+								112:leaf=-0.263919145
+						52:[MIN_R_BAL_BY_CRED_LIM_03M<0.129813582] yes=79,no=80,missing=79
+							79:[MIN_R_BAL_BY_MAX_BAL_03M<-1.48539615] yes=113,no=114,missing=113
+								113:leaf=-0.261829108
+								114:[MAX_R_BAL_BY_MAX_BAL_06M<-0.0475530848] yes=149,no=150,missing=149
+									149:leaf=0.372686505
+									150:[D_CRED_LIM_TO_BAL<-0.271536797] yes=191,no=192,missing=191
+										191:leaf=0.287337273
+										192:leaf=-0.225578099
+							80:leaf=-0.295757622
+					32:[MIN_VIGENTEH_12M<-0.277621388] yes=53,no=54,missing=53
+						53:leaf=-0.350245237
+						54:[MAX_BAL_06M<-0.285975099] yes=81,no=82,missing=81
+							81:[MONTHS_SINCE_LAST_OPEN_BANKING<-0.5] yes=115,no=116,missing=115
+								115:leaf=-0.303788036
+								116:[MAX_FD_CALCAR_FLOOR<-0.273809522] yes=151,no=152,missing=151
+									151:leaf=-0.351064384
+									152:[AVG_FD_CALCAR_CEIL<0.920634925] yes=193,no=194,missing=193
+										193:leaf=0.261867821
+										194:leaf=-0.123066828
+							82:[MIN_R_BAL_BY_CRED_LIM_12M<0.0500526838] yes=117,no=118,missing=117
+								117:[MIN_BAL_06M<1.75915599] yes=153,no=154,missing=153
+									153:[D_CRED_LIM_TO_BAL<-0.329301775] yes=195,no=196,missing=195
+										195:leaf=0.301388621
+										196:leaf=-0.389595717
+									154:[CUR_BAL<1.76766372] yes=197,no=198,missing=197
+										197:leaf=0.307905942
+										198:leaf=-0.313899636
+								118:[MIN_D_CRED_LIM_TO_BAL_03M<-0.047798872] yes=155,no=156,missing=155
+									155:leaf=-0.378087282
+									156:[D_CRED_LIM_TO_BAL<-0.0105915954] yes=199,no=200,missing=199
+										199:leaf=0.276558727
+										200:leaf=-0.0731128529
+			8:[AVG_PND_MENOS_VENC29_06M<2.26984096] yes=17,no=18,missing=17
+				17:[AVG_VIGENTEH_12M<-0.0772906393] yes=33,no=34,missing=33
+					33:leaf=-0.271764249
+					34:[AVG_R_BAL_BY_CRED_LIM_12M<0.265083849] yes=55,no=56,missing=55
+						55:[DEUDA_TOT<1.09243703] yes=83,no=84,missing=83
+							83:[DS_OL_CL<0.843111277] yes=119,no=120,missing=119
+								119:[BK12_CLEAN<0.75] yes=157,no=158,missing=157
+									157:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.633512616] yes=201,no=202,missing=201
+										201:leaf=0.137638807
+										202:leaf=0.311970681
+									158:leaf=-0.197700948
+								120:leaf=-0.219771728
+							84:leaf=-0.302570879
+						56:leaf=-0.36659494
+				18:leaf=-0.331819773
+		4:[DS_CL<0.575875521] yes=9,no=10,missing=9
+			9:[MAX_PCT_VENC29_12M<2.54208016] yes=19,no=20,missing=19
+				19:[MAX_R_BAL_BY_CRED_LIM_06M<0.464598507] yes=35,no=36,missing=35
+					35:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<-0.0822495744] yes=57,no=58,missing=57
+						57:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_03M<-0.257407248] yes=85,no=86,missing=85
+							85:[DEUDA_TOT<-0.323529422] yes=121,no=122,missing=121
+								121:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<0.414136589] yes=159,no=160,missing=159
+									159:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<0.337300777] yes=203,no=204,missing=203
+										203:leaf=-0.322176218
+										204:leaf=0.27147609
+									160:[AVG_R_BAL_BY_CRED_LIM_12M<0.745310545] yes=205,no=206,missing=205
+										205:leaf=-0.41520822
+										206:leaf=0.25481078
+								122:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_03M<-0.0567567721] yes=161,no=162,missing=161
+									161:leaf=-0.361996233
+									162:leaf=0.296027184
+							86:leaf=-0.407678515
+						58:[MAX_MAX_HI_CALCAR_FLOOR_12M<0.206493497] yes=87,no=88,missing=87
+							87:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.578416705] yes=123,no=124,missing=123
+								123:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<0.457390249] yes=163,no=164,missing=163
+									163:[MIN_R_BAL_BY_MAX_BAL_03M<-0.222928286] yes=207,no=208,missing=207
+										207:leaf=-0.337679744
+										208:leaf=0.209459811
+									164:leaf=-0.333913088
+								124:[MIN_R_BAL_BY_CRED_LIM_12M<0.786758304] yes=165,no=166,missing=165
+									165:leaf=-0.456191927
+									166:[NBK12_DEUDA_CP<-0.00793883298] yes=209,no=210,missing=209
+										209:leaf=0.227694392
+										210:leaf=-0.121926613
+							88:[NBK12_PCT_SAT<8.98513031] yes=125,no=126,missing=125
+								125:[MAX_R_BAL_BY_MAX_BAL_03M<-0.67674005] yes=167,no=168,missing=167
+									167:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.0104837501] yes=211,no=212,missing=211
+										211:leaf=-0.325083852
+										212:leaf=0.209734485
+									168:leaf=-0.429644257
+								126:[MIN_VIGENTEH_03M<3.15266109] yes=169,no=170,missing=169
+									169:leaf=0.329362184
+									170:leaf=-0.314569116
+					36:[AVG_D_CRED_LIM_TO_BAL_06M<-0.316586852] yes=59,no=60,missing=59
+						59:leaf=-0.366574913
+						60:[DEUDA_TOT<-0.121848747] yes=89,no=90,missing=89
+							89:[AVG_R_BAL_BY_CRED_LIM_12M<0.698063016] yes=127,no=128,missing=127
+								127:[AVG_R_BAL_BY_CRED_LIM_06M<0.419646978] yes=171,no=172,missing=171
+									171:leaf=0.309590489
+									172:leaf=-0.393376231
+								128:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.220173657] yes=173,no=174,missing=173
+									173:leaf=-0.292261422
+									174:[AVG_R_BAL_BY_CRED_LIM_12M<0.75242579] yes=213,no=214,missing=213
+										213:leaf=0.338053793
+										214:leaf=0.0628965721
+							90:[MIN_BAL_06M<2.89238358] yes=129,no=130,missing=129
+								129:leaf=-0.399823755
+								130:leaf=0.296066165
+				20:[AVG_AVG_HI_CALCAR_L_06M<3.78330946] yes=37,no=38,missing=37
+					37:[AVG_PND_MAS_PCT_VIGENTEH_03M<-3.85209918] yes=61,no=62,missing=61
+						61:leaf=-0.621867418
+						62:leaf=-0.361965328
+					38:leaf=0.221687764
+			10:[BK12_IND_QCRA<1.5] yes=21,no=22,missing=21
+				21:[MIN_VIGENTEH_03M<-0.303081244] yes=39,no=40,missing=39
+					39:leaf=-0.370568186
+					40:[MIN_D_CRED_LIM_TO_BAL_12M<0.143159866] yes=63,no=64,missing=63
+						63:[MAX_AVG_HI_CALCAR_L_06M<-0.550000012] yes=91,no=92,missing=91
+							91:leaf=-0.281793654
+							92:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.308606207] yes=131,no=132,missing=131
+								131:leaf=-0.323989511
+								132:[R_BAL_BY_CRED_LIM<0.61610961] yes=175,no=176,missing=175
+									175:[BK_DEUDA_CP<0.334999979] yes=215,no=216,missing=215
+										215:leaf=0.133919165
+										216:leaf=0.311199784
+									176:[MIN_R_BAL_BY_CRED_LIM_12M<0.844245493] yes=217,no=218,missing=217
+										217:leaf=0.346115053
+										218:leaf=0.126422733
+						64:leaf=-0.367390931
+				22:leaf=-0.355085999
+	2:[AVG_PCT_VENC59_03M<0.00840999931] yes=5,no=6,missing=5
+		5:[R_BAL_BY_CRED_LIM<0.622870326] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_PCT_VENC29_06M<403.022461] yes=23,no=24,missing=23
+				23:[DEUDA_TOT<0.348739505] yes=41,no=42,missing=41
+					41:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_12M<-0.341895491] yes=65,no=66,missing=65
+						65:leaf=-0.372044146
+						66:[MIN_PCT_VIGENTEH_03M<-39.2312393] yes=93,no=94,missing=93
+							93:[NUM_VENC29_12M<9.5] yes=133,no=134,missing=133
+								133:[MAX_CRED_LIM_12M<1.86354244] yes=177,no=178,missing=177
+									177:[MAX_PCT_VENC29_03M<0.114092141] yes=219,no=220,missing=219
+										219:leaf=0.207207903
+										220:leaf=-0.0402056351
+									178:leaf=-0.381865263
+								134:leaf=-0.531511486
+							94:leaf=-0.59584558
+					42:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.119121119] yes=67,no=68,missing=67
+						67:[AVG_AVG_HI_CALCAR_FLOOR_12M<-0.48570013] yes=95,no=96,missing=95
+							95:[MAX_AVG_HI_CALCAR_L_03M<-0.13636364] yes=135,no=136,missing=135
+								135:leaf=-0.29960686
+								136:leaf=0.327677876
+							96:leaf=-0.598249793
+						68:[AVG_PCT_VIGENTEH_06M<-49.3003731] yes=97,no=98,missing=97
+							97:[AVG_PND_MAS_VENC89_06M<18.3928566] yes=137,no=138,missing=137
+								137:[NBK12_NUM_CRED<-0.200314075] yes=179,no=180,missing=179
+									179:leaf=-0.309364974
+									180:[BK12_DPD_PROM<-0.5] yes=221,no=222,missing=221
+										221:leaf=-0.253090829
+										222:leaf=0.312487513
+								138:leaf=-0.4312419
+							98:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.99933982] yes=139,no=140,missing=139
+								139:leaf=-0.489346892
+								140:[AVG_PCT_VIGENTEH_06M<-15.5279846] yes=181,no=182,missing=181
+									181:leaf=-0.466060519
+									182:leaf=0.350980252
+				24:leaf=-0.502366245
+			12:[AVG_PND_MAS_PCT_VENC59_03M<0.0051734997] yes=25,no=26,missing=25
+				25:[MAX_VENCIDO1MAS_03M<4.5] yes=43,no=44,missing=43
+					43:leaf=-0.319612026
+					44:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.691274643] yes=69,no=70,missing=69
+						69:[MAX_R_BAL_BY_MAX_BAL_03M<-0.00334380544] yes=99,no=100,missing=99
+							99:leaf=0.122408621
+							100:leaf=0.350275338
+						70:[DS_CL<0.503404677] yes=101,no=102,missing=101
+							101:leaf=-0.345134139
+							102:leaf=0.268378377
+				26:leaf=-0.395837158
+		6:[MIN_PCT_VENC60M_06M<0.0578221828] yes=13,no=14,missing=13
+			13:[MIN_R_BAL_BY_MAX_BAL_06M<-0.817853451] yes=27,no=28,missing=27
+				27:[MIN_MAX_HI_CALCAR_L_12M<1.25] yes=45,no=46,missing=45
+					45:leaf=-0.533152759
+					46:[AVG_PND_MAS_CRED_LIM_03M<-0.254716992] yes=71,no=72,missing=71
+						71:leaf=-0.320812225
+						72:[MIN_CRED_LIM_06M<-0.15791741] yes=103,no=104,missing=103
+							103:leaf=0.341466069
+							104:leaf=0.146028161
+				28:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_06M<19.3888893] yes=47,no=48,missing=47
+					47:[MAX_FD_CALCAR_L<-0.5] yes=73,no=74,missing=73
+						73:[AVG_PCT_VIGENTEH_12M<-23.9844017] yes=105,no=106,missing=105
+							105:[MIN_D_CRED_LIM_TO_BAL_12M<-0.216818541] yes=141,no=142,missing=141
+								141:leaf=0.335295081
+								142:leaf=-0.299500287
+							106:leaf=-0.886751711
+						74:[BK12_DPD_PROM<3.5] yes=107,no=108,missing=107
+							107:[MIN_CRED_LIM_06M<-0.382105172] yes=143,no=144,missing=143
+								143:[AVG_PND_MENOS_PCT_VENC1M_12M<10.4594593] yes=183,no=184,missing=183
+									183:leaf=0.284993947
+									184:leaf=-0.555645108
+								144:[NBK12_NUM_CRED<-0.312482655] yes=185,no=186,missing=185
+									185:leaf=-0.36970669
+									186:[BK12_MAX_CREDIT_AMT<3.32258081] yes=223,no=224,missing=223
+										223:leaf=0.292263061
+										224:leaf=0.0122726662
+							108:leaf=-0.368156552
+					48:leaf=-0.510416269
+			14:leaf=-0.425582975
+booster[5]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<36.3507462] yes=1,no=2,missing=1
+	1:[NUM_VIGENTEH_12M<-10.5] yes=3,no=4,missing=3
+		3:[BK_DEUDA_CP<0.800000012] yes=7,no=8,missing=7
+			7:[AVG_R_BAL_BY_CRED_LIM_12M<0.217962235] yes=15,no=16,missing=15
+				15:[BK12_MAX_CREDIT_AMT<-0.209677413] yes=31,no=32,missing=31
+					31:[BK12_MAX_CREDIT_AMT<-0.59677422] yes=57,no=58,missing=57
+						57:leaf=-0.339644462
+						58:[DEUDA_TOT<-0.0714285746] yes=95,no=96,missing=95
+							95:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<-1.42179012] yes=141,no=142,missing=141
+								141:leaf=-0.305316657
+								142:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<0.0126862479] yes=187,no=188,missing=187
+									187:[AVG_CRED_LIM_06M<-0.378436655] yes=235,no=236,missing=235
+										235:leaf=-0.230770901
+										236:leaf=0.275448501
+									188:leaf=-0.276468307
+							96:leaf=-0.357556462
+					32:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<5.19509411] yes=59,no=60,missing=59
+						59:leaf=-0.357295424
+						60:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<5.21595192] yes=97,no=98,missing=97
+							97:leaf=0.262947679
+							98:leaf=-0.225122601
+				16:[MAX_R_BAL_BY_CRED_LIM_03M<0.550671101] yes=33,no=34,missing=33
+					33:[MAX_R_BAL_BY_CRED_LIM_12M<0.403660685] yes=61,no=62,missing=61
+						61:[MAX_R_BAL_BY_MAX_BAL_03M<-1.49722266] yes=99,no=100,missing=99
+							99:leaf=-0.35862866
+							100:[MIN_VIGENTEH_12M<-0.205489099] yes=143,no=144,missing=143
+								143:leaf=-0.31005004
+								144:[AVG_R_BAL_BY_CRED_LIM_06M<0.703753233] yes=189,no=190,missing=189
+									189:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.263283789] yes=237,no=238,missing=237
+										237:leaf=0.169878855
+										238:leaf=0.019517336
+									190:leaf=-0.36806494
+						62:leaf=-0.496272653
+					34:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<0.0535294414] yes=63,no=64,missing=63
+						63:leaf=0.0719103888
+						64:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<0.401318818] yes=101,no=102,missing=101
+							101:leaf=0.338749558
+							102:leaf=0.101748966
+			8:[MIN_R_BAL_BY_MAX_BAL_06M<0.402471066] yes=17,no=18,missing=17
+				17:[BK12_NUM_TC_ACT<-0.674999952] yes=35,no=36,missing=35
+					35:leaf=-0.341796935
+					36:[MS_OP<1.02380955] yes=65,no=66,missing=65
+						65:[BK12_MAX_CREDIT_AMT<0.0483870953] yes=103,no=104,missing=103
+							103:[MAX_BAL_06M<1.27256513] yes=145,no=146,missing=145
+								145:[MIN_D_CRED_LIM_TO_BAL_12M<-0.257408023] yes=191,no=192,missing=191
+									191:leaf=0.0786535367
+									192:[MIN_CRED_LIM_06M<-0.227368385] yes=239,no=240,missing=239
+										239:leaf=0.215918377
+										240:leaf=0.331068754
+								146:leaf=0.0626313165
+							104:[NBK12_PCT_SAT<0.429561168] yes=147,no=148,missing=147
+								147:[D_CRED_LIM_TO_BAL<-0.275717258] yes=193,no=194,missing=193
+									193:leaf=0.24320899
+									194:leaf=-0.553022146
+								148:[MIN_R_BAL_BY_MAX_BAL_03M<-0.0294780768] yes=195,no=196,missing=195
+									195:[MS_OP<0.0714285746] yes=241,no=242,missing=241
+										241:leaf=0.245169401
+										242:leaf=-0.30960682
+									196:leaf=0.310010046
+						66:[D_CRED_LIM_TO_BAL<-0.304047495] yes=105,no=106,missing=105
+							105:leaf=0.250297755
+							106:leaf=-0.327635676
+				18:leaf=-0.346051335
+		4:[R_BAL_BY_CRED_LIM<0.315053016] yes=9,no=10,missing=9
+			9:[DS_OL_CL<0.571347475] yes=19,no=20,missing=19
+				19:[MAX_R_BAL_BY_CRED_LIM_12M<-3.31975317] yes=37,no=38,missing=37
+					37:[MIN_R_BAL_BY_CRED_LIM_03M<-1.10515761] yes=67,no=68,missing=67
+						67:leaf=-0.293401062
+						68:leaf=0.312878907
+					38:[NUM_VENC89_12M<5] yes=69,no=70,missing=69
+						69:[DEUDA_TOT<1.31512606] yes=107,no=108,missing=107
+							107:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<1.23141623] yes=149,no=150,missing=149
+								149:leaf=-0.341858894
+								150:[AVG_MAX_HI_CALCAR_CEIL_12M<0.255782455] yes=197,no=198,missing=197
+									197:[SUM_VIGENTEH_12M<-0.275709331] yes=243,no=244,missing=243
+										243:leaf=-0.207931086
+										244:leaf=0.329301119
+									198:leaf=-0.34725675
+							108:[MIN_R_BAL_BY_CRED_LIM_03M<0.200262755] yes=151,no=152,missing=151
+								151:leaf=-0.225394845
+								152:leaf=0.252830893
+						70:leaf=0.24919042
+				20:[MIN_PCT_VIGENTEH_12M<-0.0860357806] yes=39,no=40,missing=39
+					39:[NBK12_PCT_SAT<1.91597314e-06] yes=71,no=72,missing=71
+						71:[MAX_R_BAL_BY_CRED_LIM_12M<-0.111239567] yes=109,no=110,missing=109
+							109:[MAX_VENCIDO1MAS_06M<0.75] yes=153,no=154,missing=153
+								153:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.857775569] yes=199,no=200,missing=199
+									199:leaf=-0.204774991
+									200:[MAX_R_BAL_BY_CRED_LIM_12M<-0.217597008] yes=245,no=246,missing=245
+										245:leaf=0.322799683
+										246:leaf=0.127804041
+								154:leaf=-0.260539144
+							110:leaf=-0.292570353
+						72:[MIN_R_BAL_BY_MAX_BAL_12M<0.212813139] yes=111,no=112,missing=111
+							111:leaf=-0.324431151
+							112:leaf=0.130120039
+					40:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.435813665] yes=73,no=74,missing=73
+						73:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.67578053] yes=113,no=114,missing=113
+							113:[AVG_PND_MENOS_AVG_HI_CALCAR_L_06M<0.841039658] yes=155,no=156,missing=155
+								155:leaf=-0.334468573
+								156:[D_CRED_LIM_TO_BAL<-0.250318468] yes=201,no=202,missing=201
+									201:leaf=0.256045222
+									202:leaf=-0.24286744
+							114:leaf=0.269417346
+						74:[MIN_R_BAL_BY_MAX_BAL_06M<0.368621945] yes=115,no=116,missing=115
+							115:leaf=0.370585144
+							116:leaf=-0.25253883
+			10:[R_BAL_BY_CRED_LIM<0.64784503] yes=21,no=22,missing=21
+				21:[MAX_R_BAL_BY_MAX_BAL_03M<-0.36493358] yes=41,no=42,missing=41
+					41:[MIN_VIGENTEH_12M<-0.22976777] yes=75,no=76,missing=75
+						75:leaf=-0.342782021
+						76:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.183140248] yes=117,no=118,missing=117
+							117:[MIN_VIGENTEH_03M<-0.264425784] yes=157,no=158,missing=157
+								157:leaf=0.385294169
+								158:leaf=-0.321541309
+							118:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_03M<0.014543239] yes=159,no=160,missing=159
+								159:[MAX_R_BAL_BY_MAX_BAL_03M<-0.771332145] yes=203,no=204,missing=203
+									203:leaf=-0.2563757
+									204:[AVG_PND_MENOS_PCT_VENC29_03M<0.000401499972] yes=247,no=248,missing=247
+										247:leaf=0.323622972
+										248:leaf=0.140197366
+								160:[BK12_CLEAN<10.75] yes=205,no=206,missing=205
+									205:leaf=-0.347730666
+									206:leaf=0.264520258
+					42:[DEUDA_TOT<-0.474789917] yes=77,no=78,missing=77
+						77:[AVG_MAX_HI_CALCAR_FLOOR_12M<0.627566516] yes=119,no=120,missing=119
+							119:[AVG_AVG_HI_CALCAR_FLOOR_12M<0.249999747] yes=161,no=162,missing=161
+								161:[BK12_MAX_CREDIT_AMT<-0.564516127] yes=207,no=208,missing=207
+									207:[DS_OL_CL<-0.00208175625] yes=249,no=250,missing=249
+										249:leaf=-0.37224099
+										250:leaf=0.126832664
+									208:leaf=-0.360277444
+								162:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<0.322720498] yes=209,no=210,missing=209
+									209:leaf=0.34021315
+									210:[D_CRED_LIM_TO_BAL<-0.122629069] yes=251,no=252,missing=251
+										251:leaf=-0.211043313
+										252:leaf=0.280390948
+							120:[AVG_AVG_HI_CALCAR_L_06M<1.75937128] yes=163,no=164,missing=163
+								163:leaf=-0.393420905
+								164:leaf=0.251834542
+						78:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<0.497829229] yes=121,no=122,missing=121
+							121:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_03M<3.49444437] yes=165,no=166,missing=165
+								165:leaf=-0.350703239
+								166:[MIN_AVG_HI_CALCAR_L_03M<0.350000024] yes=211,no=212,missing=211
+									211:leaf=0.287469208
+									212:leaf=-0.258582443
+							122:[D_CRED_LIM_TO_BAL<-0.222202986] yes=167,no=168,missing=167
+								167:[MIN_R_BAL_BY_MAX_BAL_12M<0.190346956] yes=213,no=214,missing=213
+									213:[MIN_BAL_12M<-0.146047711] yes=253,no=254,missing=253
+										253:leaf=-0.299874514
+										254:leaf=0.225142762
+									214:[MAX_R_BAL_BY_CRED_LIM_03M<0.550483704] yes=255,no=256,missing=255
+										255:leaf=-0.402116388
+										256:leaf=0.0792252272
+								168:[MIN_R_BAL_BY_MAX_BAL_06M<0.298018217] yes=215,no=216,missing=215
+									215:leaf=-0.34841466
+									216:[MIN_D_CRED_LIM_TO_BAL_06M<-0.0906645134] yes=257,no=258,missing=257
+										257:leaf=0.232318595
+										258:leaf=-0.157256693
+				22:[AVG_R_BAL_BY_CRED_LIM_03M<0.727730989] yes=43,no=44,missing=43
+					43:[SUM_VIGENTEH_06M<-0.376122981] yes=79,no=80,missing=79
+						79:leaf=0.106783293
+						80:[AVG_MAX_HI_CALCAR_L_06M<0.590909243] yes=123,no=124,missing=123
+							123:leaf=0.319043189
+							124:leaf=0.118317388
+					44:[MIN_R_BAL_BY_MAX_BAL_03M<0.358935714] yes=81,no=82,missing=81
+						81:leaf=-0.274537653
+						82:leaf=0.23588255
+	2:[AVG_PCT_VENC59_03M<0.00840999931] yes=5,no=6,missing=5
+		5:[R_BAL_BY_CRED_LIM<0.624317646] yes=11,no=12,missing=11
+			11:[AVG_PND_MENOS_PCT_VENC29_06M<403.022461] yes=23,no=24,missing=23
+				23:[MAX_VENCIDO30MAS_12M<210.5] yes=45,no=46,missing=45
+					45:[NBK12_PCT_60PLUS<1.0999999] yes=83,no=84,missing=83
+						83:[NUM_VENCIDO60MAS_12M<6.5] yes=125,no=126,missing=125
+							125:[NUM_MAX_HI_CALCAR_FLOOR_03M<-0.25] yes=169,no=170,missing=169
+								169:leaf=-0.389497757
+								170:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.677460134] yes=217,no=218,missing=217
+									217:[DEUDA_TOT<0.348739505] yes=259,no=260,missing=259
+										259:leaf=0.159077972
+										260:leaf=-0.0431690663
+									218:leaf=-0.608424902
+							126:leaf=-0.548548222
+						84:[AVG_PND_MENOS_PCT_VENC1M_12M<5.85917473] yes=127,no=128,missing=127
+							127:leaf=-0.446241826
+							128:[AVG_AVG_HI_CALCAR_CEIL_12M<2.16654515] yes=171,no=172,missing=171
+								171:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_06M<2.47222233] yes=219,no=220,missing=219
+									219:[NUM_MAX_HI_CALCAR_FLOOR_03M<-0.25] yes=261,no=262,missing=261
+										261:leaf=0.133008018
+										262:leaf=-0.451497525
+									220:[DS_OL_CL<0.369984865] yes=263,no=264,missing=263
+										263:leaf=0.334585249
+										264:leaf=0.120772503
+								172:leaf=-0.533345282
+					46:[NUM_VENC29_12M<8.5] yes=85,no=86,missing=85
+						85:[BK12_PC_SAT<0.720000029] yes=129,no=130,missing=129
+							129:[MS_OP<2.16666651] yes=173,no=174,missing=173
+								173:[BK12_DPD_PROM<-0.5] yes=221,no=222,missing=221
+									221:leaf=-0.358238429
+									222:[AVG_CRED_LIM_12M<-0.301431298] yes=265,no=266,missing=265
+										265:leaf=-0.0865532607
+										266:leaf=0.261801362
+								174:leaf=-0.423580229
+							130:leaf=-0.35601604
+						86:leaf=-0.410731822
+				24:leaf=-0.437154591
+			12:[AVG_PND_MENOS_BAL_12M<-0.280302912] yes=25,no=26,missing=25
+				25:[MAX_PCT_VIGENTEH_03M<-0.0348705947] yes=47,no=48,missing=47
+					47:leaf=0.28363812
+					48:leaf=-0.600653708
+				26:[AVG_PND_MAS_PCT_VENC59_03M<0.0051734997] yes=49,no=50,missing=49
+					49:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.690133214] yes=87,no=88,missing=87
+						87:leaf=0.33317709
+						88:[MS_OP<-0.166666672] yes=131,no=132,missing=131
+							131:leaf=0.245232537
+							132:leaf=-0.265050441
+					50:leaf=-0.259836763
+		6:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.095608443] yes=13,no=14,missing=13
+			13:[MIN_R_BAL_BY_MAX_BAL_03M<-0.0254039653] yes=27,no=28,missing=27
+				27:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.298658192] yes=51,no=52,missing=51
+					51:leaf=-0.480422586
+					52:[AVG_PCT_VENC59_12M<0.0122640003] yes=89,no=90,missing=89
+						89:[AVG_PND_MENOS_PCT_VENC59_03M<0.0196885001] yes=133,no=134,missing=133
+							133:[MAX_PCT_VENC29_12M<7.46725512] yes=175,no=176,missing=175
+								175:[AVG_PND_MAS_AVG_HI_CALCAR_FLOOR_06M<1.12773108] yes=223,no=224,missing=223
+									223:[MIN_R_BAL_BY_MAX_BAL_03M<-0.137029305] yes=267,no=268,missing=267
+										267:leaf=-0.421113759
+										268:leaf=0.24281697
+									224:leaf=0.318610579
+								176:leaf=-0.655153811
+							134:leaf=-1.07783604
+						90:[BK12_NUM_EXP_PAIDONTIME<-0.810000002] yes=135,no=136,missing=135
+							135:leaf=-0.38347283
+							136:[AVG_PND_MENOS_CRED_LIM_03M<-0.250943393] yes=177,no=178,missing=177
+								177:[MAX_VENC89_12M<13.5] yes=225,no=226,missing=225
+									225:[NBK12_NUM_CRED<-0.283259571] yes=269,no=270,missing=269
+										269:leaf=0.266439557
+										270:leaf=-0.45166865
+									226:leaf=-0.666950524
+								178:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<-0.873356462] yes=227,no=228,missing=227
+									227:[MAX_BAL_03M<-0.332915753] yes=271,no=272,missing=271
+										271:leaf=0.255182654
+										272:leaf=-0.300480008
+									228:[MAX_PCT_VENC29_12M<52.8761749] yes=273,no=274,missing=273
+										273:leaf=0.306260616
+										274:leaf=0.0640814453
+				28:leaf=-0.781183302
+			14:[MIN_VENCIDO1MAS_12M<49.5] yes=29,no=30,missing=29
+				29:[MAX_FD_CALCAR_FLOOR<-0.0178571437] yes=53,no=54,missing=53
+					53:[DS_CL<0.58463037] yes=91,no=92,missing=91
+						91:leaf=-0.481034935
+						92:leaf=0.24382104
+					54:[AVG_PND_MENOS_PCT_VENC59_03M<0.0611005016] yes=93,no=94,missing=93
+						93:[BK12_MAX_CREDIT_AMT<1.82258058] yes=137,no=138,missing=137
+							137:[MAX_PCT_VENC29_12M<1.64244509] yes=179,no=180,missing=179
+								179:[CUR_BAL<-0.299341023] yes=229,no=230,missing=229
+									229:leaf=0.247462586
+									230:leaf=-0.425964355
+								180:[BK12_NUM_EXP_PAIDONTIME<-0.275000006] yes=231,no=232,missing=231
+									231:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-0.0955138355] yes=275,no=276,missing=275
+										275:leaf=0.319784313
+										276:leaf=-0.627736449
+									232:[AVG_PND_MAS_AVG_HI_CALCAR_L_03M<4.75659084] yes=277,no=278,missing=277
+										277:leaf=0.323325694
+										278:leaf=0.0603844859
+							138:[D_CRED_LIM_TO_BAL<-0.299603432] yes=181,no=182,missing=181
+								181:leaf=0.273532093
+								182:leaf=-0.506053388
+						94:[AVG_PND_MAS_PCT_VENC59_06M<0.093206495] yes=139,no=140,missing=139
+							139:[MIN_BAL_12M<-0.123226687] yes=183,no=184,missing=183
+								183:leaf=-0.263562799
+								184:leaf=-0.899746478
+							140:[AVG_VENC29_12M<68.0610886] yes=185,no=186,missing=185
+								185:leaf=-0.750123858
+								186:[MAX_R_BAL_BY_MAX_BAL_03M<-0.0218102466] yes=233,no=234,missing=233
+									233:leaf=0.0752211064
+									234:leaf=0.318715096
+				30:[D_CRED_LIM_TO_BAL<-0.397071928] yes=55,no=56,missing=55
+					55:leaf=0.249171212
+					56:leaf=-0.552783072
+booster[6]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<36.3507462] yes=1,no=2,missing=1
+	1:[AVG_R_BAL_BY_CRED_LIM_12M<0.350641727] yes=3,no=4,missing=3
+		3:[NUM_VIGENTEH_12M<-11.5] yes=7,no=8,missing=7
+			7:[AVG_FD_CALCAR_CEIL<5.95238113] yes=15,no=16,missing=15
+				15:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.206478655] yes=27,no=28,missing=27
+					27:[MONTHS_ON_FILE_BANKING<-0.5] yes=49,no=50,missing=49
+						49:[AVG_BAL_03M<-0.239774555] yes=79,no=80,missing=79
+							79:[BK12_MAX_CREDIT_AMT<-0.59677422] yes=119,no=120,missing=119
+								119:leaf=-0.304115415
+								120:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-1.306494] yes=163,no=164,missing=163
+									163:leaf=-0.255667239
+									164:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.096840784] yes=211,no=212,missing=211
+										211:leaf=0.277008086
+										212:leaf=-0.268815011
+							80:leaf=-0.332603216
+						50:[R_BAL_BY_CRED_LIM<0.655410707] yes=81,no=82,missing=81
+							81:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<5.22016382] yes=121,no=122,missing=121
+								121:leaf=-0.35363403
+								122:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<5.30136585] yes=165,no=166,missing=165
+									165:leaf=0.240536079
+									166:leaf=-0.197921693
+							82:leaf=0.2321731
+					28:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<0.316862345] yes=51,no=52,missing=51
+						51:[MIN_BAL_12M<-0.22131604] yes=83,no=84,missing=83
+							83:leaf=-0.294333488
+							84:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<0.339541465] yes=123,no=124,missing=123
+								123:[MAX_R_BAL_BY_CRED_LIM_12M<0.103372075] yes=167,no=168,missing=167
+									167:leaf=0.342749804
+									168:[D_CRED_LIM_TO_BAL<-0.321504533] yes=213,no=214,missing=213
+										213:leaf=0.243355542
+										214:leaf=0.100104451
+								124:[BK12_CLEAN<0.75] yes=169,no=170,missing=169
+									169:leaf=-0.322293669
+									170:leaf=0.270525903
+						52:leaf=-0.369609982
+				16:[AVG_D_CRED_LIM_TO_BAL_12M<-0.175649017] yes=29,no=30,missing=29
+					29:leaf=-0.357636929
+					30:[MS_OP<1.02380955] yes=53,no=54,missing=53
+						53:[AVG_R_BAL_BY_MAX_BAL_12M<-0.0132896993] yes=85,no=86,missing=85
+							85:[NBK12_DEUDA_TOT<-0.146995574] yes=125,no=126,missing=125
+								125:[MIN_R_BAL_BY_CRED_LIM_03M<0.13000755] yes=171,no=172,missing=171
+									171:leaf=-0.436581224
+									172:leaf=0.263919502
+								126:[BK12_MAX_CREDIT_AMT<-0.661290288] yes=173,no=174,missing=173
+									173:leaf=0.0289660748
+									174:[MAX_R_BAL_BY_MAX_BAL_06M<-2.94909668] yes=215,no=216,missing=215
+										215:leaf=0.146483749
+										216:leaf=0.303439528
+							86:leaf=-0.222764552
+						54:leaf=-0.219198212
+			8:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.230273157] yes=17,no=18,missing=17
+				17:[AVG_D_CRED_LIM_TO_BAL_06M<-0.285540789] yes=31,no=32,missing=31
+					31:[MAX_AVG_HI_CALCAR_L_12M<0.5] yes=55,no=56,missing=55
+						55:leaf=-0.252844095
+						56:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_03M<-0.309523821] yes=87,no=88,missing=87
+							87:leaf=0.299383193
+							88:leaf=-0.175232187
+					32:[NUM_VENC89_06M<1.5] yes=57,no=58,missing=57
+						57:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<-1.61849761] yes=89,no=90,missing=89
+							89:[MIN_R_BAL_BY_CRED_LIM_03M<-1.13416696] yes=127,no=128,missing=127
+								127:leaf=-0.230207622
+								128:leaf=0.268112808
+							90:leaf=-0.325772047
+						58:leaf=0.228449404
+				18:[MAX_R_BAL_BY_MAX_BAL_12M<-0.421337247] yes=33,no=34,missing=33
+					33:[D_CRED_LIM_TO_BAL<0.397427589] yes=59,no=60,missing=59
+						59:[BK12_MAX_CREDIT_AMT<-0.40322578] yes=91,no=92,missing=91
+							91:leaf=-0.300658345
+							92:[NBK12_PCT_SAT<0.0109766098] yes=129,no=130,missing=129
+								129:[MIN_R_BAL_BY_MAX_BAL_12M<0.133697748] yes=175,no=176,missing=175
+									175:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<-0.825497687] yes=217,no=218,missing=217
+										217:leaf=-0.208294526
+										218:leaf=0.266033798
+									176:leaf=-0.231531188
+								130:[AVG_PND_MAS_PCT_VENC29_03M<0.00106299995] yes=177,no=178,missing=177
+									177:leaf=-0.296847761
+									178:leaf=0.234984249
+						60:leaf=-0.320694983
+					34:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.412768096] yes=61,no=62,missing=61
+						61:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.229635566] yes=93,no=94,missing=93
+							93:leaf=0.216790006
+							94:[MIN_R_BAL_BY_CRED_LIM_06M<0.618018925] yes=131,no=132,missing=131
+								131:[DS_CL<0.614056408] yes=179,no=180,missing=179
+									179:leaf=-0.334188849
+									180:[MAX_AVG_HI_CALCAR_CEIL_12M<-0.234848499] yes=219,no=220,missing=219
+										219:leaf=0.197076887
+										220:leaf=-0.240961865
+								132:[MIN_CRED_LIM_12M<-0.412280679] yes=181,no=182,missing=181
+									181:leaf=0.249215022
+									182:leaf=-0.275015652
+						62:[MS_OP<-0.40476191] yes=95,no=96,missing=95
+							95:[R_BAL_BY_CRED_LIM<0.644536257] yes=133,no=134,missing=133
+								133:leaf=-0.312952071
+								134:leaf=0.224078223
+							96:[AVG_AVG_HI_CALCAR_CEIL_12M<-0.0360690989] yes=135,no=136,missing=135
+								135:leaf=-0.245765552
+								136:[AVG_AVG_HI_CALCAR_L_12M<0.413978547] yes=183,no=184,missing=183
+									183:leaf=0.320719481
+									184:leaf=-0.210016564
+		4:[MAX_R_BAL_BY_CRED_LIM_03M<0.550671101] yes=9,no=10,missing=9
+			9:[BK_DEUDA_CP<0.355000019] yes=19,no=20,missing=19
+				19:[MIN_VIGENTEH_03M<-0.281512618] yes=35,no=36,missing=35
+					35:leaf=-0.35089919
+					36:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_12M<-0.0846597329] yes=63,no=64,missing=63
+						63:[DEUDA_TOT<-0.180672273] yes=97,no=98,missing=97
+							97:[MIN_R_BAL_BY_CRED_LIM_12M<0.478156269] yes=137,no=138,missing=137
+								137:[CUR_BAL<-0.330063939] yes=185,no=186,missing=185
+									185:leaf=0.242082834
+									186:leaf=-0.445093036
+								138:[MONTHS_ON_FILE_BANKING<-0.5] yes=187,no=188,missing=187
+									187:[MIN_D_CRED_LIM_TO_BAL_12M<-0.194423974] yes=221,no=222,missing=221
+										221:leaf=0.066011332
+										222:leaf=0.267742217
+									188:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.353643358] yes=223,no=224,missing=223
+										223:leaf=0.101471394
+										224:leaf=-0.155093953
+							98:[AVG_R_BAL_BY_CRED_LIM_12M<0.395045549] yes=139,no=140,missing=139
+								139:[BK_IND_PMOR<-0.0663076937] yes=189,no=190,missing=189
+									189:leaf=-0.256940514
+									190:[MIN_D_CRED_LIM_TO_BAL_12M<-0.213079631] yes=225,no=226,missing=225
+										225:leaf=0.32160157
+										226:leaf=0.111699425
+								140:[MS_OP<-0.642857194] yes=191,no=192,missing=191
+									191:[MIN_D_CRED_LIM_TO_BAL_03M<-0.241293937] yes=227,no=228,missing=227
+										227:leaf=-0.296351373
+										228:leaf=0.186419129
+									192:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.307154477] yes=229,no=230,missing=229
+										229:leaf=0.0541637726
+										230:leaf=-0.374336571
+						64:[NBK12_COMM_PCT_PLUS<3.125] yes=99,no=100,missing=99
+							99:leaf=-0.344108522
+							100:leaf=0.231446132
+				20:[MIN_R_BAL_BY_MAX_BAL_06M<0.393603802] yes=37,no=38,missing=37
+					37:[AVG_PND_MAS_AVG_HI_CALCAR_FLOOR_12M<0.264775515] yes=65,no=66,missing=65
+						65:[MIN_BAL_03M<-0.222564429] yes=101,no=102,missing=101
+							101:leaf=0.0153262559
+							102:[MIN_R_BAL_BY_MAX_BAL_03M<-0.294083714] yes=141,no=142,missing=141
+								141:leaf=-0.269381672
+								142:[MAX_R_BAL_BY_CRED_LIM_12M<0.416321635] yes=193,no=194,missing=193
+									193:[MIN_D_CRED_LIM_TO_BAL_12M<0.129847467] yes=231,no=232,missing=231
+										231:leaf=0.317482978
+										232:leaf=0.109904177
+									194:leaf=0.000543555361
+						66:[DS_CL<0.569552541] yes=103,no=104,missing=103
+							103:leaf=-0.315322012
+							104:leaf=0.259071171
+					38:leaf=-0.332636982
+			10:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_03M<-0.0648149997] yes=21,no=22,missing=21
+				21:leaf=-0.271854401
+				22:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.311654925] yes=39,no=40,missing=39
+					39:leaf=-0.281041682
+					40:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_12M<0.524310827] yes=67,no=68,missing=67
+						67:[MIN_D_CRED_LIM_TO_BAL_03M<-0.259814501] yes=105,no=106,missing=105
+							105:[DEUDA_TOT_CP<-0.75] yes=143,no=144,missing=143
+								143:leaf=0.0458184183
+								144:[AVG_PND_MAS_D_CRED_LIM_TO_BAL_12M<-0.30263105] yes=195,no=196,missing=195
+									195:leaf=0.322715849
+									196:leaf=0.0771460533
+							106:[MIN_BAL_06M<-0.307201743] yes=145,no=146,missing=145
+								145:leaf=0.230185524
+								146:leaf=-0.319236457
+						68:leaf=-0.251131892
+	2:[AVG_VENC59_12M<1.435606] yes=5,no=6,missing=5
+		5:[SUM_VENC59_12M<11.5] yes=11,no=12,missing=11
+			11:[MAX_D_CRED_LIM_TO_BAL_03M<-0.233561069] yes=23,no=24,missing=23
+				23:[MIN_BAL_06M<-0.308111012] yes=41,no=42,missing=41
+					41:leaf=-0.36928919
+					42:[AVG_R_BAL_BY_CRED_LIM_12M<0.751275241] yes=69,no=70,missing=69
+						69:[NBK12_PCT_SAT<0.163524479] yes=107,no=108,missing=107
+							107:[AVG_PND_MAS_PCT_VENC29_03M<0.107459001] yes=147,no=148,missing=147
+								147:[AVG_PND_MAS_AVG_HI_CALCAR_L_03M<2.35699701] yes=197,no=198,missing=197
+									197:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.670009255] yes=233,no=234,missing=233
+										233:leaf=-0.285009444
+										234:leaf=0.221128315
+									198:[MIN_BAL_12M<-0.298967242] yes=235,no=236,missing=235
+										235:leaf=0.218431398
+										236:leaf=-0.521686018
+								148:leaf=-0.404849917
+							108:[DEUDA_TOT_CP<1.25] yes=149,no=150,missing=149
+								149:[AVG_PND_MAS_MAX_HI_CALCAR_L_03M<2.625] yes=199,no=200,missing=199
+									199:leaf=-0.570840597
+									200:leaf=0.263586372
+								150:[AVG_PCT_VENC29_06M<15.3999996] yes=201,no=202,missing=201
+									201:leaf=0.320745796
+									202:leaf=0.0582668297
+						70:leaf=-0.34888652
+				24:[AVG_D_CRED_LIM_TO_BAL_03M<-0.188882649] yes=43,no=44,missing=43
+					43:leaf=-0.498725057
+					44:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<-0.0437542871] yes=71,no=72,missing=71
+						71:[CUR_BAL<-0.335415184] yes=109,no=110,missing=109
+							109:leaf=0.244769499
+							110:leaf=-0.412299484
+						72:[MIN_R_BAL_BY_CRED_LIM_12M<0.157469213] yes=111,no=112,missing=111
+							111:[R_BAL_BY_CRED_LIM<-0.464970261] yes=151,no=152,missing=151
+								151:[NBK12_PCT_PROMT<-0.00852878205] yes=203,no=204,missing=203
+									203:[MAX_R_BAL_BY_CRED_LIM_03M<-0.0599509925] yes=237,no=238,missing=237
+										237:leaf=-0.414837331
+										238:leaf=0.258383155
+									204:[AVG_PND_MAS_PCT_VIGENTEH_12M<-3.0136137] yes=239,no=240,missing=239
+										239:leaf=0.218546346
+										240:leaf=-0.142374828
+								152:leaf=-0.464120269
+							112:[MS_OP<-0.59523809] yes=153,no=154,missing=153
+								153:leaf=-0.430964619
+								154:[MS_OP<0.880952358] yes=205,no=206,missing=205
+									205:[MAX_R_BAL_BY_CRED_LIM_12M<0.34205249] yes=241,no=242,missing=241
+										241:leaf=0.22001873
+										242:leaf=-0.375644177
+									206:leaf=-0.402691782
+			12:leaf=-0.546775937
+		6:[MAX_MAX_HI_CALCAR_FLOOR_12M<-0.448051929] yes=13,no=14,missing=13
+			13:leaf=-0.366547227
+			14:[MAX_R_BAL_BY_MAX_BAL_03M<-0.587645769] yes=25,no=26,missing=25
+				25:[AVG_PCT_VENC59_12M<0.0075594997] yes=45,no=46,missing=45
+					45:[MAX_VENC29_03M<155.5] yes=73,no=74,missing=73
+						73:leaf=-0.594521821
+						74:[MAX_PCT_VENC29_06M<45.8836098] yes=113,no=114,missing=113
+							113:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<-0.0428164154] yes=155,no=156,missing=155
+								155:leaf=0.294303298
+								156:leaf=0.0320991017
+							114:leaf=-0.383243203
+					46:[MAX_D_CRED_LIM_TO_BAL_03M<-0.263176918] yes=75,no=76,missing=75
+						75:leaf=-0.448917478
+						76:[BK12_NUM_EXP_PAIDONTIME<-0.810000002] yes=115,no=116,missing=115
+							115:leaf=-0.407965451
+							116:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_06M<18.759922] yes=157,no=158,missing=157
+								157:[MAX_VENC29_06M<1056.75] yes=207,no=208,missing=207
+									207:[MIN_R_BAL_BY_MAX_BAL_12M<-0.681444049] yes=243,no=244,missing=243
+										243:leaf=-0.0457785949
+										244:leaf=0.224239364
+									208:leaf=-0.355552137
+								158:leaf=-0.426168025
+				26:[DEUDA_TOT<1.24789917] yes=47,no=48,missing=47
+					47:[AVG_PND_MENOS_PCT_VENC29_03M<0.226898] yes=77,no=78,missing=77
+						77:[AVG_PCT_VIGENTEH_12M<-3.71659803] yes=117,no=118,missing=117
+							117:[NUM_VENC90M_03M<3.5] yes=159,no=160,missing=159
+								159:[AVG_PND_MENOS_PCT_VENC89_06M<0.135255501] yes=209,no=210,missing=209
+									209:[AVG_PND_MENOS_VENC29_12M<28.7569427] yes=245,no=246,missing=245
+										245:leaf=0.269001395
+										246:leaf=0.181927174
+									210:leaf=-0.379655838
+								160:leaf=-0.391635925
+							118:[CUR_CRED_LIM<1.49209571] yes=161,no=162,missing=161
+								161:leaf=-0.4563815
+								162:leaf=0.253359079
+						78:leaf=-0.425194055
+					48:leaf=-0.354777008
+booster[7]:
+0:[AVG_PND_MAS_VENCIDO1MAS_03M<72.0149231] yes=1,no=2,missing=1
+	1:[AVG_R_BAL_BY_CRED_LIM_12M<0.350641727] yes=3,no=4,missing=3
+		3:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_12M<-0.189639688] yes=7,no=8,missing=7
+			7:[NUM_VENC29_12M<2.5] yes=15,no=16,missing=15
+				15:[DS_CL<0.614056408] yes=29,no=30,missing=29
+					29:leaf=-0.318405211
+					30:[MIN_D_CRED_LIM_TO_BAL_12M<2.117167] yes=51,no=52,missing=51
+						51:leaf=-0.219199464
+						52:leaf=0.172215432
+				16:[DS_OL_CL<0.735806227] yes=31,no=32,missing=31
+					31:leaf=-0.285286158
+					32:leaf=0.221986338
+			8:[MIN_VIGENTEH_12M<-0.288177341] yes=17,no=18,missing=17
+				17:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.293174654] yes=33,no=34,missing=33
+					33:[SUM_VIGENTEH_12M<-0.377461135] yes=53,no=54,missing=53
+						53:leaf=0.247720659
+						54:leaf=-0.231543988
+					34:leaf=-0.314885616
+				18:[AVG_FD_CALCAR_L<5.83333302] yes=35,no=36,missing=35
+					35:[MAX_VIGENTEH_03M<0.833168447] yes=55,no=56,missing=55
+						55:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-1.70400751] yes=73,no=74,missing=73
+							73:[BK_IND_PMOR<-0.371709615] yes=97,no=98,missing=97
+								97:[AVG_BAL_03M<-0.303721607] yes=131,no=132,missing=131
+									131:leaf=-0.255245358
+									132:leaf=0.245517313
+								98:leaf=-0.320012122
+							74:[MS_OP<0.59523809] yes=99,no=100,missing=99
+								99:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.283755153] yes=133,no=134,missing=133
+									133:[MIN_D_CRED_LIM_TO_BAL_12M<1.25953579] yes=171,no=172,missing=171
+										171:leaf=-0.224602953
+										172:leaf=0.0753211975
+									134:[DEUDA_TOT<-0.466386557] yes=173,no=174,missing=173
+										173:leaf=0.228192046
+										174:leaf=-0.084755525
+								100:[DEUDA_TOT_CP<-0.25] yes=135,no=136,missing=135
+									135:leaf=-0.320192397
+									136:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<0.37577486] yes=175,no=176,missing=175
+										175:leaf=0.134751976
+										176:leaf=-0.314848006
+						56:[AVG_MAX_HI_CALCAR_FLOOR_12M<-0.454983234] yes=75,no=76,missing=75
+							75:leaf=0.190668792
+							76:leaf=-0.324075758
+					36:[MS_OP<0.952380955] yes=57,no=58,missing=57
+						57:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.139009714] yes=77,no=78,missing=77
+							77:leaf=0.0509022623
+							78:[BK12_PC_SAT<0.405000001] yes=101,no=102,missing=101
+								101:leaf=0.298866451
+								102:leaf=0.106206194
+						58:leaf=-0.197667688
+		4:[R_BAL_BY_CRED_LIM<0.622934341] yes=9,no=10,missing=9
+			9:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.00179193553] yes=19,no=20,missing=19
+				19:[AVG_VENC29_12M<0.152462214] yes=37,no=38,missing=37
+					37:[AVG_PND_MENOS_AVG_HI_CALCAR_L_12M<-1.0155462] yes=59,no=60,missing=59
+						59:[NBK12_DEUDA_CP<-0.298620224] yes=79,no=80,missing=79
+							79:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<0.416384518] yes=103,no=104,missing=103
+								103:leaf=0.326258242
+								104:leaf=0.144657567
+							80:leaf=-0.298320383
+						60:[AVG_R_BAL_BY_CRED_LIM_12M<0.593941152] yes=81,no=82,missing=81
+							81:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_06M<0.557445049] yes=105,no=106,missing=105
+								105:[AVG_FD_CALCAR_L<1.5] yes=137,no=138,missing=137
+									137:leaf=-0.340428114
+									138:leaf=0.213090762
+								106:[NBK12_NUM_CRED<-0.237173215] yes=139,no=140,missing=139
+									139:[MIN_R_BAL_BY_MAX_BAL_06M<0.369259357] yes=177,no=178,missing=177
+										177:leaf=0.114602953
+										178:leaf=0.303884238
+									140:leaf=-0.257520735
+							82:leaf=-0.409091622
+					38:[AVG_PCT_VIGENTEH_06M<-2.05907965] yes=61,no=62,missing=61
+						61:leaf=-0.364595771
+						62:[MIN_R_BAL_BY_MAX_BAL_12M<0.3807742] yes=83,no=84,missing=83
+							83:leaf=-0.290279359
+							84:[AVG_MAX_HI_CALCAR_CEIL_12M<0.130909055] yes=107,no=108,missing=107
+								107:[DEUDA_TOT<0.214285731] yes=141,no=142,missing=141
+									141:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.310451895] yes=179,no=180,missing=179
+										179:leaf=0.0803091303
+										180:leaf=0.326152802
+									142:leaf=-0.23208794
+								108:leaf=-0.303296596
+				20:[AVG_PCT_VENC29_03M<0.00414900016] yes=39,no=40,missing=39
+					39:[MIN_VIGENTEH_06M<-0.288875222] yes=63,no=64,missing=63
+						63:leaf=-0.316875875
+						64:[MAX_R_BAL_BY_CRED_LIM_03M<0.0687190443] yes=85,no=86,missing=85
+							85:[AVG_MAX_HI_CALCAR_FLOOR_03M<0.0213331208] yes=109,no=110,missing=109
+								109:[MAX_R_BAL_BY_CRED_LIM_06M<0.048556596] yes=143,no=144,missing=143
+									143:[CUR_BAL<-0.294211149] yes=181,no=182,missing=181
+										181:leaf=0.245782539
+										182:leaf=-0.293099105
+									144:[DS_CL<-0.131809339] yes=183,no=184,missing=183
+										183:leaf=0.129832193
+										184:leaf=0.313231498
+								110:leaf=-0.209237307
+							86:[MIN_R_BAL_BY_MAX_BAL_06M<0.0998328477] yes=111,no=112,missing=111
+								111:[NBK12_PCT_PROMT<-0.102110252] yes=145,no=146,missing=145
+									145:[NBK12_DEUDA_TOT<-0.132820964] yes=185,no=186,missing=185
+										185:leaf=-0.381306857
+										186:leaf=0.267477423
+									146:leaf=-0.423342109
+								112:[MAX_R_BAL_BY_MAX_BAL_03M<-0.823179543] yes=147,no=148,missing=147
+									147:[MIN_R_BAL_BY_MAX_BAL_06M<0.11273016] yes=187,no=188,missing=187
+										187:leaf=0.188710719
+										188:leaf=-0.468195081
+									148:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_12M<0.347114474] yes=189,no=190,missing=189
+										189:leaf=0.179303944
+										190:leaf=0.0269204974
+					40:leaf=-0.499897331
+			10:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.311255276] yes=21,no=22,missing=21
+				21:leaf=-0.271339923
+				22:[D_CRED_LIM_TO_BAL<-0.274774373] yes=41,no=42,missing=41
+					41:[DS_OL_CL<-0.413323224] yes=65,no=66,missing=65
+						65:leaf=-0.204639375
+						66:[NBK12_PCT_PROMT<0.100145519] yes=87,no=88,missing=87
+							87:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.729991555] yes=113,no=114,missing=113
+								113:[MIN_R_BAL_BY_CRED_LIM_12M<0.295767009] yes=149,no=150,missing=149
+									149:[MIN_BAL_06M<-0.308294326] yes=191,no=192,missing=191
+										191:leaf=0.211402267
+										192:leaf=0.0176041014
+									150:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<-0.220173657] yes=193,no=194,missing=193
+										193:leaf=0.110881016
+										194:leaf=0.311116546
+								114:leaf=0.0341713391
+							88:[R_BAL_BY_CRED_LIM<0.648832679] yes=115,no=116,missing=115
+								115:leaf=-0.483758658
+								116:leaf=0.271002889
+					42:leaf=-0.26636216
+	2:[MIN_R_BAL_BY_CRED_LIM_12M<0.650049925] yes=5,no=6,missing=5
+		5:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.29907912] yes=11,no=12,missing=11
+			11:[DS_OL_CL<0.976722181] yes=23,no=24,missing=23
+				23:leaf=-0.509087205
+				24:leaf=0.142505482
+			12:[AVG_PND_MAS_AVG_HI_CALCAR_L_12M<1.32414246] yes=25,no=26,missing=25
+				25:[AVG_PND_MENOS_AVG_HI_CALCAR_L_03M<1.52267575] yes=43,no=44,missing=43
+					43:[DEUDA_TOT<1.10084033] yes=67,no=68,missing=67
+						67:[MIN_R_BAL_BY_MAX_BAL_06M<0.298178792] yes=89,no=90,missing=89
+							89:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_12M<-1.22367454] yes=117,no=118,missing=117
+								117:[AVG_VENCIDO1MAS_06M<0.149999887] yes=151,no=152,missing=151
+									151:leaf=0.207286552
+									152:leaf=-0.380767673
+								118:[BK12_PCT_90PLUS<-0.25999999] yes=153,no=154,missing=153
+									153:leaf=-0.37807855
+									154:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<-0.391132414] yes=195,no=196,missing=195
+										195:leaf=-0.13621372
+										196:leaf=0.128255337
+							90:[AVG_AVG_HI_CALCAR_CEIL_12M<-0.427956462] yes=119,no=120,missing=119
+								119:[MAX_AVG_HI_CALCAR_L_03M<-0.409090936] yes=155,no=156,missing=155
+									155:leaf=-0.247095719
+									156:[MS_OP<0.523809552] yes=197,no=198,missing=197
+										197:leaf=0.117911056
+										198:leaf=0.280848444
+								120:[NUM_MAX_HI_CALCAR_FLOOR_03M<-0.25] yes=157,no=158,missing=157
+									157:leaf=-0.193080306
+									158:leaf=-0.687949955
+						68:leaf=-0.411346048
+					44:leaf=-0.64852953
+				26:[MAX_PCT_VENC89_06M<0.622407794] yes=45,no=46,missing=45
+					45:[MAX_R_BAL_BY_MAX_BAL_03M<-0.793151498] yes=69,no=70,missing=69
+						69:[MAX_PCT_VENC30M_12M<0.0908409208] yes=91,no=92,missing=91
+							91:[AVG_PCT_VENC29_12M<17.2530212] yes=121,no=122,missing=121
+								121:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_03M<-0.21156916] yes=159,no=160,missing=159
+									159:[NUM_VENC29_12M<6.5] yes=199,no=200,missing=199
+										199:leaf=0.220261276
+										200:leaf=-0.350737542
+									160:leaf=-0.461307496
+								122:leaf=-0.582139552
+							92:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_06M<-0.0482687764] yes=123,no=124,missing=123
+								123:[MAX_PCT_VENC59_06M<0.120608643] yes=161,no=162,missing=161
+									161:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-0.422620833] yes=201,no=202,missing=201
+										201:leaf=-0.268352419
+										202:leaf=-0.819451571
+									162:[BK12_PCT_PROMT<0.00499999989] yes=203,no=204,missing=203
+										203:leaf=0.262548
+										204:leaf=-0.0578078888
+								124:[AVG_PND_MENOS_AVG_HI_CALCAR_L_03M<3.97426319] yes=163,no=164,missing=163
+									163:[MIN_PCT_VENC60M_06M<0.132073641] yes=205,no=206,missing=205
+										205:leaf=0.244247839
+										206:leaf=-0.234902516
+									164:leaf=-0.341374338
+						70:[MS_OP<2.21428585] yes=93,no=94,missing=93
+							93:[MIN_AVG_HI_CALCAR_L_06M<-0.25] yes=125,no=126,missing=125
+								125:leaf=-0.367043406
+								126:[AVG_PCT_VENC29_12M<177.410065] yes=165,no=166,missing=165
+									165:[AVG_PND_MAS_VENCIDO1MAS_03M<115.074631] yes=207,no=208,missing=207
+										207:leaf=-0.163707256
+										208:leaf=0.228985325
+									166:leaf=-0.382371545
+							94:leaf=-0.376543671
+					46:leaf=-0.422614902
+		6:[AVG_VENCIDO1MAS_12M<0.163352221] yes=13,no=14,missing=13
+			13:leaf=-0.490978867
+			14:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<3.27688622] yes=27,no=28,missing=27
+				27:[DS_CL<-0.720330715] yes=47,no=48,missing=47
+					47:leaf=-0.412190586
+					48:[MAX_PCT_VENC59_06M<0.568678141] yes=71,no=72,missing=71
+						71:[MAX_R_BAL_BY_CRED_LIM_12M<0.116761863] yes=95,no=96,missing=95
+							95:[BK_IND_PMOR<0.649177134] yes=127,no=128,missing=127
+								127:leaf=-0.504607797
+								128:leaf=0.214007959
+							96:[SUM_VENC29_03M<79] yes=129,no=130,missing=129
+								129:[MIN_R_BAL_BY_CRED_LIM_12M<0.877730727] yes=167,no=168,missing=167
+									167:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<-0.325525463] yes=209,no=210,missing=209
+										209:leaf=0.0966094658
+										210:leaf=0.284221321
+									168:leaf=-0.253878951
+								130:[MAX_VENC29_12M<12.1875] yes=169,no=170,missing=169
+									169:leaf=-0.534346938
+									170:[AVG_PND_MAS_MAX_HI_CALCAR_L_03M<2.71875] yes=211,no=212,missing=211
+										211:leaf=0.190279201
+										212:leaf=-0.235857829
+						72:leaf=-0.416175038
+				28:[R_BAL_BY_CRED_LIM<0.675858259] yes=49,no=50,missing=49
+					49:leaf=-0.532166719
+					50:leaf=0.220196053
+booster[8]:
+0:[BK_DEUDA_CP<3.36000013] yes=1,no=2,missing=1
+	1:[MIN_R_BAL_BY_MAX_BAL_03M<-0.196711779] yes=3,no=4,missing=3
+		3:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<1.40234303] yes=7,no=8,missing=7
+			7:[MAX_R_BAL_BY_CRED_LIM_03M<0.535998166] yes=15,no=16,missing=15
+				15:[MAX_VENCIDO1MAS_03M<3653.5] yes=31,no=32,missing=31
+					31:[MAX_BAL_03M<-0.350095987] yes=59,no=60,missing=59
+						59:[MIN_BAL_12M<-0.277873755] yes=91,no=92,missing=91
+							91:[AVG_PND_MAS_BAL_12M<-0.348978221] yes=135,no=136,missing=135
+								135:[D_CRED_LIM_TO_BAL<-0.271961391] yes=167,no=168,missing=167
+									167:leaf=0.135382801
+									168:leaf=-0.313609183
+								136:[MAX_R_BAL_BY_MAX_BAL_12M<-6.17246628] yes=169,no=170,missing=169
+									169:[NBK12_COMM_PCT_PLUS<-0.125] yes=205,no=206,missing=205
+										205:leaf=0.223175585
+										206:leaf=-0.183444172
+									170:leaf=-0.264829576
+							92:[CUR_BAL<-0.316576064] yes=137,no=138,missing=137
+								137:[DEUDA_TOT<-0.172268912] yes=171,no=172,missing=171
+									171:leaf=0.276794702
+									172:leaf=0.0629237294
+								138:leaf=-0.208394721
+						60:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.309289038] yes=93,no=94,missing=93
+							93:[NBK12_PCT_60PLUS<2024.85681] yes=139,no=140,missing=139
+								139:leaf=-0.333383322
+								140:leaf=0.109992407
+							94:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.528459311] yes=141,no=142,missing=141
+								141:[AVG_R_BAL_BY_CRED_LIM_12M<0.258263826] yes=173,no=174,missing=173
+									173:leaf=0.249162853
+									174:leaf=-0.222195238
+								142:leaf=-0.344537616
+					32:leaf=0.198982567
+				16:[AVG_PND_MAS_BAL_03M<-0.30796802] yes=33,no=34,missing=33
+					33:leaf=-0.285837978
+					34:[AVG_PND_MAS_R_BAL_BY_CRED_LIM_03M<0.313435376] yes=61,no=62,missing=61
+						61:leaf=0.283383042
+						62:leaf=0.0205886476
+			8:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<-0.836141944] yes=17,no=18,missing=17
+				17:[NBK12_COMM_PCT_PLUS<-0.375] yes=35,no=36,missing=35
+					35:leaf=0.181759864
+					36:leaf=-0.324209571
+				18:[MIN_R_BAL_BY_MAX_BAL_03M<-0.240682185] yes=37,no=38,missing=37
+					37:[DEUDA_TOT<-0.14705883] yes=63,no=64,missing=63
+						63:[MS_OP<0.119047627] yes=95,no=96,missing=95
+							95:leaf=0.102719434
+							96:leaf=0.304364264
+						64:[MIN_R_BAL_BY_CRED_LIM_06M<-0.672730446] yes=97,no=98,missing=97
+							97:leaf=0.251550853
+							98:leaf=-0.241102114
+					38:leaf=-0.228155822
+		4:[R_BAL_BY_CRED_LIM<0.622210741] yes=9,no=10,missing=9
+			9:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_12M<-0.344138801] yes=19,no=20,missing=19
+				19:[AVG_PND_MENOS_MAX_HI_CALCAR_L_12M<-0.987332582] yes=39,no=40,missing=39
+					39:[NBK12_DEUDA_CP<-0.298653364] yes=65,no=66,missing=65
+						65:[MAX_FD_CALCAR_L<-0.5] yes=99,no=100,missing=99
+							99:[AVG_VIGENTEH_03M<-0.348553419] yes=143,no=144,missing=143
+								143:leaf=0.304808855
+								144:[MIN_R_BAL_BY_CRED_LIM_12M<0.877262592] yes=175,no=176,missing=175
+									175:leaf=-0.241660491
+									176:leaf=0.253791869
+							100:leaf=-0.255506039
+						66:leaf=-0.31490168
+					40:[AVG_PND_MENOS_PCT_VENC1M_06M<88.7481155] yes=67,no=68,missing=67
+						67:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_03M<0.156626672] yes=101,no=102,missing=101
+							101:leaf=-0.344659746
+							102:leaf=0.0913590789
+						68:[MIN_R_BAL_BY_CRED_LIM_03M<0.612276673] yes=103,no=104,missing=103
+							103:leaf=0.0874899775
+							104:leaf=0.21691376
+				20:[MAX_VENCIDO1MAS_03M<633.5] yes=41,no=42,missing=41
+					41:[AVG_PND_MENOS_VENCIDO1MAS_12M<6.63059711] yes=69,no=70,missing=69
+						69:[MIN_VIGENTEH_06M<-0.287953287] yes=105,no=106,missing=105
+							105:leaf=-0.320033908
+							106:[AVG_PND_MENOS_PCT_VENC29_06M<20.2219105] yes=145,no=146,missing=145
+								145:[AVG_PND_MENOS_VENC29_03M<3.78888893] yes=177,no=178,missing=177
+									177:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_12M<-0.476877749] yes=207,no=208,missing=207
+										207:leaf=-0.271804243
+										208:leaf=-0.000732964545
+									178:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_12M<1.03946984] yes=209,no=210,missing=209
+										209:leaf=0.21028915
+										210:leaf=-0.401430994
+								146:[MIN_VIGENTEH_12M<-0.268824756] yes=179,no=180,missing=179
+									179:[AVG_PND_MENOS_VENCIDO1MAS_03M<205.857147] yes=211,no=212,missing=211
+										211:leaf=0.0590782426
+										212:leaf=0.265694022
+									180:[AVG_VENCIDO1MAS_12M<0.259943217] yes=213,no=214,missing=213
+										213:leaf=0.172029689
+										214:leaf=-0.523974955
+						70:[DEUDA_TOT<-0.155462191] yes=107,no=108,missing=107
+							107:[MAX_PCT_VENC29_06M<104.211288] yes=147,no=148,missing=147
+								147:[NBK12_PCT_60PLUS<18.9841843] yes=181,no=182,missing=181
+									181:[AVG_PND_MENOS_MAX_HI_CALCAR_CEIL_12M<-0.337365806] yes=215,no=216,missing=215
+										215:leaf=-0.267906636
+										216:leaf=0.233001396
+									182:leaf=-0.317171037
+								148:leaf=-0.40678975
+							108:[AVG_PND_MENOS_VENCIDO30MAS_12M<0.115385003] yes=149,no=150,missing=149
+								149:[MAX_VENC29_03M<563.5] yes=183,no=184,missing=183
+									183:leaf=-0.45695141
+									184:leaf=0.218857005
+								150:[BK12_PCT_90PLUS<-0.145000011] yes=185,no=186,missing=185
+									185:leaf=-0.370786786
+									186:[MAX_R_BAL_BY_MAX_BAL_03M<-0.470075011] yes=217,no=218,missing=217
+										217:leaf=-0.301844418
+										218:leaf=0.170002222
+					42:[AVG_VENC29_03M<1106.125] yes=71,no=72,missing=71
+						71:leaf=-0.538240671
+						72:[MIN_AVG_HI_CALCAR_L_06M<0.3125] yes=109,no=110,missing=109
+							109:leaf=-0.176061943
+							110:leaf=0.252440065
+			10:[MIN_R_BAL_BY_CRED_LIM_12M<-0.543278933] yes=21,no=22,missing=21
+				21:leaf=-0.341020226
+				22:[AVG_R_BAL_BY_CRED_LIM_12M<0.750870883] yes=43,no=44,missing=43
+					43:[D_CRED_LIM_TO_BAL<-0.275169253] yes=73,no=74,missing=73
+						73:[MIN_R_BAL_BY_CRED_LIM_03M<0.726784587] yes=111,no=112,missing=111
+							111:[BK12_NUM_CRED<-0.0700000003] yes=151,no=152,missing=151
+								151:leaf=0.00345114642
+								152:[DS_CL<-0.419017494] yes=187,no=188,missing=187
+									187:leaf=0.0477931686
+									188:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_12M<-0.316907108] yes=219,no=220,missing=219
+										219:leaf=0.0421339199
+										220:leaf=0.288870871
+							112:leaf=-0.0425056331
+						74:[MIN_VIGENTEH_06M<-0.312538415] yes=113,no=114,missing=113
+							113:leaf=0.194316
+							114:leaf=-0.271090537
+					44:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.675623357] yes=75,no=76,missing=75
+						75:leaf=-0.349287748
+						76:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_06M<-0.0501648933] yes=115,no=116,missing=115
+							115:leaf=-0.250091493
+							116:[MONTHS_ON_FILE_BANKING<-0.5] yes=153,no=154,missing=153
+								153:leaf=0.270953685
+								154:[DS_OL_CL<0.601249099] yes=189,no=190,missing=189
+									189:leaf=-0.0314553604
+									190:leaf=0.176038772
+	2:[MAX_R_BAL_BY_MAX_BAL_03M<-1.18971205] yes=5,no=6,missing=5
+		5:[MAX_R_BAL_BY_CRED_LIM_06M<-0.712625265] yes=11,no=12,missing=11
+			11:[BK_DEUDA_CP<6.26999998] yes=23,no=24,missing=23
+				23:leaf=-0.319391012
+				24:[AVG_PND_MENOS_MAX_HI_CALCAR_L_06M<2.9699986] yes=45,no=46,missing=45
+					45:[AVG_VENCIDO1MAS_06M<23.4416733] yes=77,no=78,missing=77
+						77:[MAX_VENCIDO1MAS_12M<1.16666675] yes=117,no=118,missing=117
+							117:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.863065124] yes=155,no=156,missing=155
+								155:[MIN_D_CRED_LIM_TO_BAL_12M<0.596695423] yes=191,no=192,missing=191
+									191:leaf=0.282516897
+									192:leaf=0.0555936135
+								156:leaf=-0.284313172
+							118:leaf=-0.420597523
+						78:[MAX_PCT_VENC30M_03M<0.00187236897] yes=119,no=120,missing=119
+							119:leaf=-0.205740705
+							120:[MIN_AVG_HI_CALCAR_L_06M<-0.4375] yes=157,no=158,missing=157
+								157:leaf=-0.000144197213
+								158:[NUM_VENCIDO30MAS_06M<2.5] yes=193,no=194,missing=193
+									193:leaf=0.101165496
+									194:[MIN_R_BAL_BY_MAX_BAL_03M<-0.146316394] yes=221,no=222,missing=221
+										221:leaf=0.301162541
+										222:leaf=0.109216496
+					46:leaf=-0.326090515
+			12:[AVG_PND_MENOS_MAX_HI_CALCAR_L_03M<0.368487716] yes=25,no=26,missing=25
+				25:[AVG_FD_CALCAR_L<2.75] yes=47,no=48,missing=47
+					47:leaf=0.271249354
+					48:[MIN_BAL_12M<0.288872898] yes=79,no=80,missing=79
+						79:leaf=-0.277359188
+						80:leaf=0.184196994
+				26:[MAX_VENC59_06M<117] yes=49,no=50,missing=49
+					49:leaf=-0.570240259
+					50:[AVG_PND_MAS_PCT_VENC59_03M<0.00933700055] yes=81,no=82,missing=81
+						81:[MAX_VENC59_06M<128] yes=121,no=122,missing=121
+							121:leaf=0.240344033
+							122:leaf=0.0132364873
+						82:leaf=-0.436249644
+		6:[AVG_PND_MAS_AVG_HI_CALCAR_L_12M<3.12969351] yes=13,no=14,missing=13
+			13:[AVG_PND_MAS_CRED_LIM_03M<-0.359433949] yes=27,no=28,missing=27
+				27:[MAX_R_BAL_BY_CRED_LIM_12M<0.613093257] yes=51,no=52,missing=51
+					51:leaf=-0.44731757
+					52:leaf=0.223369792
+				28:[DEUDA_TOT<0.348739505] yes=53,no=54,missing=53
+					53:[NUM_VENC90M_12M<10.5] yes=83,no=84,missing=83
+						83:[AVG_VENCIDO30MAS_03M<62.625] yes=123,no=124,missing=123
+							123:[AVG_PND_MENOS_BAL_06M<0.680304408] yes=159,no=160,missing=159
+								159:[MAX_R_BAL_BY_MAX_BAL_03M<-0.587782145] yes=195,no=196,missing=195
+									195:[AVG_PND_MENOS_AVG_HI_CALCAR_CEIL_06M<2.76790905] yes=223,no=224,missing=223
+										223:leaf=0.250113785
+										224:leaf=-0.629752636
+									196:[AVG_PND_MENOS_VENC90M_12M<6.33683014] yes=225,no=226,missing=225
+										225:leaf=0.258003294
+										226:leaf=-0.0748245046
+								160:[BK12_MAX_CREDIT_AMT<-0.790322542] yes=197,no=198,missing=197
+									197:leaf=0.196049318
+									198:leaf=-0.542749286
+							124:[DS_OL_CL<-0.42524603] yes=161,no=162,missing=161
+								161:leaf=-0.0112112034
+								162:[AVG_PND_MAS_AVG_HI_CALCAR_CEIL_03M<36.6042099] yes=199,no=200,missing=199
+									199:[AVG_PND_MAS_PCT_VENC59_03M<0.292079002] yes=227,no=228,missing=227
+										227:leaf=0.295002252
+										228:leaf=0.0773784444
+									200:leaf=-0.0171031915
+						84:[NBK12_COMM_PCT_PLUS<0.125] yes=125,no=126,missing=125
+							125:leaf=0.205061793
+							126:leaf=-0.373213798
+					54:[AVG_PND_MAS_PCT_VENC29_06M<262.81897] yes=85,no=86,missing=85
+						85:[NUM_MAX_HI_CALCAR_FLOOR_03M<0.75] yes=127,no=128,missing=127
+							127:[AVG_PND_MENOS_MAX_HI_CALCAR_L_06M<2.8092134] yes=163,no=164,missing=163
+								163:[MAX_D_CRED_LIM_TO_BAL_03M<0.668021679] yes=201,no=202,missing=201
+									201:[AVG_VENC29_12M<11.7130699] yes=229,no=230,missing=229
+										229:leaf=0.253287882
+										230:leaf=0.0806562528
+									202:leaf=-0.254887432
+								164:leaf=-0.341701806
+							128:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<-0.0319011658] yes=165,no=166,missing=165
+								165:[MIN_R_BAL_BY_MAX_BAL_03M<0.0254008584] yes=203,no=204,missing=203
+									203:leaf=0.0446541235
+									204:leaf=0.245332912
+								166:leaf=-0.468320101
+						86:leaf=-0.537997484
+			14:[BK12_MAX_CREDIT_AMT<-0.241935477] yes=29,no=30,missing=29
+				29:[MAX_PCT_VENC59_12M<0.082711421] yes=55,no=56,missing=55
+					55:[MAX_VENC59_12M<18.5] yes=87,no=88,missing=87
+						87:[AVG_PND_MENOS_AVG_HI_CALCAR_L_12M<1.54719186] yes=129,no=130,missing=129
+							129:leaf=0.205213517
+							130:leaf=-0.403120309
+						88:[MAX_VENC90M_12M<2653.5] yes=131,no=132,missing=131
+							131:leaf=0.302319944
+							132:leaf=0.0838706791
+					56:leaf=-0.354552448
+				30:[NBK12_PCT_PROMT<2.59241724] yes=57,no=58,missing=57
+					57:leaf=-0.641289115
+					58:[DS_CL<0.60676074] yes=89,no=90,missing=89
+						89:[MIN_CRED_LIM_12M<1.69088197] yes=133,no=134,missing=133
+							133:leaf=-0.280309588
+							134:leaf=0.183111355
+						90:leaf=0.184589565
+booster[9]:
+0:[BK_DEUDA_CP<0.335000008] yes=1,no=2,missing=1
+	1:[D_CRED_LIM_TO_BAL<0.120178424] yes=3,no=4,missing=3
+		3:[MIN_R_BAL_BY_CRED_LIM_12M<-0.587005854] yes=7,no=8,missing=7
+			7:[DS_CL<0.599221826] yes=15,no=16,missing=15
+				15:[AVG_PND_MENOS_PCT_VENC1M_12M<77.011734] yes=31,no=32,missing=31
+					31:[MAX_R_BAL_BY_MAX_BAL_12M<-13.6026554] yes=55,no=56,missing=55
+						55:[CUR_CRED_LIM<-0.378301889] yes=91,no=92,missing=91
+							91:leaf=0.230693802
+							92:leaf=-0.210543498
+						56:leaf=-0.319008291
+					32:[MAX_VENC29_03M<95] yes=57,no=58,missing=57
+						57:leaf=0.0691898838
+						58:leaf=0.205144599
+				16:[NBK12_NUM_CRED<-0.255028725] yes=33,no=34,missing=33
+					33:[BK_IND_PMOR<-0.422653854] yes=59,no=60,missing=59
+						59:leaf=0.124840684
+						60:leaf=-0.297474176
+					34:[DEUDA_TOT_CP<0.25] yes=61,no=62,missing=61
+						61:[MAX_AVG_HI_CALCAR_L_03M<1.36363637] yes=93,no=94,missing=93
+							93:leaf=-0.25739193
+							94:leaf=0.212064579
+						62:[MAX_BAL_03M<-0.221786514] yes=95,no=96,missing=95
+							95:leaf=0.263973594
+							96:leaf=0.049681697
+			8:[R_BAL_BY_CRED_LIM<0.648353577] yes=17,no=18,missing=17
+				17:[AVG_VENC29_12M<0.206597149] yes=35,no=36,missing=35
+					35:[MIN_R_BAL_BY_MAX_BAL_06M<-0.0127813444] yes=63,no=64,missing=63
+						63:[MAX_R_BAL_BY_CRED_LIM_12M<-1.44721508] yes=97,no=98,missing=97
+							97:[AVG_PND_MENOS_BAL_06M<-0.32855311] yes=133,no=134,missing=133
+								133:leaf=-0.19207707
+								134:[DS_CL<-0.435068101] yes=167,no=168,missing=167
+									167:leaf=0.29558754
+									168:leaf=0.107909888
+							98:[MAX_D_CRED_LIM_TO_BAL_03M<-0.268868506] yes=135,no=136,missing=135
+								135:[DEUDA_TOT<-0.315126061] yes=169,no=170,missing=169
+									169:[MAX_D_CRED_LIM_TO_BAL_03M<-0.280838907] yes=199,no=200,missing=199
+										199:leaf=-0.245870203
+										200:leaf=0.213536337
+									170:leaf=-0.315980822
+								136:[NBK12_COMM_PCT_PLUS<0.875] yes=171,no=172,missing=171
+									171:leaf=-0.324514151
+									172:[MS_OP<-0.309523821] yes=201,no=202,missing=201
+										201:leaf=0.20226334
+										202:leaf=-0.206962898
+						64:[AVG_R_BAL_BY_MAX_BAL_06M<-0.142061532] yes=99,no=100,missing=99
+							99:[R_BAL_BY_CRED_LIM<-0.00165664416] yes=137,no=138,missing=137
+								137:leaf=-0.17648004
+								138:[MIN_D_CRED_LIM_TO_BAL_03M<-0.153531939] yes=173,no=174,missing=173
+									173:leaf=0.108310275
+									174:leaf=0.318545699
+							100:[MAX_R_BAL_BY_MAX_BAL_03M<-0.823064804] yes=139,no=140,missing=139
+								139:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_12M<0.294961095] yes=175,no=176,missing=175
+									175:[BK12_NUM_EXP_PAIDONTIME<-0.150000006] yes=203,no=204,missing=203
+										203:leaf=0.190722868
+										204:leaf=-0.414538234
+									176:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.032546252] yes=205,no=206,missing=205
+										205:leaf=0.217037216
+										206:leaf=-0.267347395
+								140:[AVG_AVG_HI_CALCAR_FLOOR_12M<0.33286494] yes=177,no=178,missing=177
+									177:[AVG_PND_MENOS_AVG_HI_CALCAR_FLOOR_12M<-0.387938201] yes=207,no=208,missing=207
+										207:leaf=-0.128712639
+										208:leaf=0.039724499
+									178:[DS_CL<-0.0700389072] yes=209,no=210,missing=209
+										209:leaf=0.0931466222
+										210:leaf=-0.377784401
+					36:[AVG_AVG_HI_CALCAR_CEIL_12M<0.0115356697] yes=65,no=66,missing=65
+						65:[MAX_AVG_HI_CALCAR_CEIL_06M<-0.310344815] yes=101,no=102,missing=101
+							101:[DS_OL_CL<0.00113550341] yes=141,no=142,missing=141
+								141:leaf=-0.312767565
+								142:[DS_CL<0.526264548] yes=179,no=180,missing=179
+									179:[MAX_CRED_LIM_12M<-0.379629612] yes=211,no=212,missing=211
+										211:leaf=-0.26213631
+										212:leaf=0.18172206
+									180:leaf=-0.298807681
+							102:[R_BAL_BY_CRED_LIM<0.615437567] yes=143,no=144,missing=143
+								143:leaf=-0.469885439
+								144:[DS_OL_CL<-0.27895534] yes=181,no=182,missing=181
+									181:leaf=0.217384651
+									182:leaf=0.0602848865
+						66:[MIN_BAL_12M<0.624059916] yes=103,no=104,missing=103
+							103:[MIN_PCT_VIGENTEH_03M<-1174.60278] yes=145,no=146,missing=145
+								145:leaf=-0.40916881
+								146:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_03M<0.0497027263] yes=183,no=184,missing=183
+									183:[AVG_AVG_HI_CALCAR_CEIL_12M<0.539051533] yes=213,no=214,missing=213
+										213:leaf=-0.372922063
+										214:leaf=0.134966433
+									184:[AVG_PND_MAS_MAX_HI_CALCAR_L_06M<1.87499952] yes=215,no=216,missing=215
+										215:leaf=0.20626539
+										216:leaf=-0.338344097
+							104:[AVG_PND_MAS_VENC29_03M<537.699951] yes=147,no=148,missing=147
+								147:leaf=-0.403412789
+								148:leaf=0.236790001
+				18:[DS_CL<0.436770439] yes=37,no=38,missing=37
+					37:[R_BAL_BY_CRED_LIM<0.66416657] yes=67,no=68,missing=67
+						67:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_03M<0.668626785] yes=105,no=106,missing=105
+							105:leaf=0.210738137
+							106:leaf=0.0448960625
+						68:leaf=-0.33660838
+					38:[MIN_D_CRED_LIM_TO_BAL_03M<-0.259829283] yes=69,no=70,missing=69
+						69:[AVG_PND_MAS_MAX_HI_CALCAR_FLOOR_06M<-0.095454663] yes=107,no=108,missing=107
+							107:leaf=0.0557674468
+							108:[NUM_MAX_HI_CALCAR_FLOOR_03M<0.75] yes=149,no=150,missing=149
+								149:leaf=0.297870129
+								150:leaf=0.0896230415
+						70:leaf=0.0180213321
+		4:[AVG_PND_MENOS_MAX_HI_CALCAR_L_06M<1.40999937] yes=9,no=10,missing=9
+			9:[MAX_R_BAL_BY_CRED_LIM_12M<-3.31873083] yes=19,no=20,missing=19
+				19:[BK12_IND_QCRA<0.5] yes=39,no=40,missing=39
+					39:leaf=-0.224227563
+					40:[R_BAL_BY_CRED_LIM<-1.45207727] yes=71,no=72,missing=71
+						71:leaf=0.121060893
+						72:leaf=0.298503548
+				20:[MONTHS_SINCE_LAST_OPEN_BANKING<-0.5] yes=41,no=42,missing=41
+					41:[MAX_BAL_12M<1.82273793] yes=73,no=74,missing=73
+						73:[MAX_VENC89_06M<27] yes=109,no=110,missing=109
+							109:leaf=-0.284351647
+							110:leaf=0.175425634
+						74:[MS_OP<0.571428597] yes=111,no=112,missing=111
+							111:leaf=0.0809550509
+							112:leaf=0.247549325
+					42:[NBK12_PCT_60PLUS<2024.85681] yes=75,no=76,missing=75
+						75:[AVG_PND_MENOS_D_CRED_LIM_TO_BAL_03M<-0.0879407674] yes=113,no=114,missing=113
+							113:[MIN_D_CRED_LIM_TO_BAL_03M<-0.0855122209] yes=151,no=152,missing=151
+								151:leaf=-0.236554042
+								152:leaf=0.263357908
+							114:[MAX_VENC59_03M<63] yes=153,no=154,missing=153
+								153:[AVG_PND_MAS_R_BAL_BY_MAX_BAL_06M<0.450387031] yes=185,no=186,missing=185
+									185:leaf=-0.32577914
+									186:[MIN_R_BAL_BY_MAX_BAL_06M<0.353938639] yes=217,no=218,missing=217
+										217:leaf=0.181246191
+										218:leaf=-0.269047111
+								154:[MAX_VENC59_03M<76] yes=187,no=188,missing=187
+									187:leaf=0.209084913
+									188:leaf=-0.24960649
+						76:[NBK12_PCT_SAT<33.0431213] yes=115,no=116,missing=115
+							115:leaf=0.235486612
+							116:leaf=-0.187037498
+			10:[MIN_R_BAL_BY_CRED_LIM_12M<-0.0885945931] yes=21,no=22,missing=21
+				21:leaf=-0.225428626
+				22:[AVG_PND_MAS_MAX_HI_CALCAR_CEIL_06M<3.23611164] yes=43,no=44,missing=43
+					43:leaf=0.268880785
+					44:leaf=0.0461844578
+	2:[AVG_PND_MAS_CRED_LIM_12M<-0.239318952] yes=5,no=6,missing=5
+		5:[DEUDA_TOT_CP<0.25] yes=11,no=12,missing=11
+			11:[DS_CL<-0.404426068] yes=23,no=24,missing=23
+				23:[DS_CL<-0.460116744] yes=45,no=46,missing=45
+					45:leaf=0.0458477736
+					46:leaf=0.265549064
+				24:[MAX_R_BAL_BY_CRED_LIM_12M<0.446582913] yes=47,no=48,missing=47
+					47:[AVG_PND_MENOS_VIGENTEH_12M<-0.340544879] yes=77,no=78,missing=77
+						77:[NUM_VENC29_12M<2.5] yes=117,no=118,missing=117
+							117:[AVG_PND_MENOS_MAX_HI_CALCAR_L_03M<1.33613515] yes=155,no=156,missing=155
+								155:leaf=0.24037309
+								156:[BK12_NUM_CRED<-0.189999998] yes=189,no=190,missing=189
+									189:leaf=-0.200900063
+									190:leaf=0.148140937
+							118:leaf=-0.394883543
+						78:[DS_OL_CL<-0.279144585] yes=119,no=120,missing=119
+							119:leaf=0.157792911
+							120:leaf=-0.515405357
+					48:[AVG_PND_MENOS_R_BAL_BY_CRED_LIM_12M<0.648864269] yes=79,no=80,missing=79
+						79:[MAX_PCT_VENC90M_12M<0.817708492] yes=121,no=122,missing=121
+							121:[BK_IND_PMOR<0.80558908] yes=157,no=158,missing=157
+								157:leaf=0.284985751
+								158:leaf=0.0719923601
+							122:leaf=-0.259786397
+						80:leaf=-0.37522468
+			12:[BK_DEUDA_CP<3.61999989] yes=25,no=26,missing=25
+				25:leaf=-0.391866297
+				26:[MIN_R_BAL_BY_MAX_BAL_06M<-0.0600209683] yes=49,no=50,missing=49
+					49:[MAX_BAL_12M<-0.409555912] yes=81,no=82,missing=81
+						81:leaf=0.164241821
+						82:leaf=-0.358394057
+					50:[AVG_PND_MENOS_VENC89_03M<41.5] yes=83,no=84,missing=83
+						83:leaf=0.296365947
+						84:leaf=0.0813554004
+		6:[MAX_R_BAL_BY_CRED_LIM_03M<0.542317927] yes=13,no=14,missing=13
+			13:[MIN_R_BAL_BY_MAX_BAL_12M<0.502435684] yes=27,no=28,missing=27
+				27:[AVG_PND_MENOS_VENC29_06M<8.8252449] yes=51,no=52,missing=51
+					51:[MIN_R_BAL_BY_MAX_BAL_03M<-0.96753931] yes=85,no=86,missing=85
+						85:[BK12_NUM_EXP_PAIDONTIME<-0.100000001] yes=123,no=124,missing=123
+							123:leaf=0.147179365
+							124:leaf=-0.331643224
+						86:[MIN_R_BAL_BY_MAX_BAL_12M<0.492431998] yes=125,no=126,missing=125
+							125:[MAX_R_BAL_BY_MAX_BAL_03M<-0.659068942] yes=159,no=160,missing=159
+								159:[MAX_R_BAL_BY_MAX_BAL_12M<-1.54641509] yes=191,no=192,missing=191
+									191:[NUM_MAX_HI_CALCAR_FLOOR_03M<0.25] yes=219,no=220,missing=219
+										219:leaf=0.20814243
+										220:leaf=-0.0897414386
+									192:[D_CRED_LIM_TO_BAL<-0.171253026] yes=221,no=222,missing=221
+										221:leaf=0.198447809
+										222:leaf=-0.355506361
+								160:[AVG_PND_MENOS_BAL_12M<1.76748443] yes=193,no=194,missing=193
+									193:[MAX_R_BAL_BY_CRED_LIM_12M<0.423619032] yes=223,no=224,missing=223
+										223:leaf=0.253720522
+										224:leaf=-0.0485488363
+									194:[MIN_CRED_LIM_12M<1.40215492] yes=225,no=226,missing=225
+										225:leaf=0.160444438
+										226:leaf=-0.323815048
+							126:leaf=-0.2823973
+					52:[MAX_VENCIDO1MAS_03M<25.5] yes=87,no=88,missing=87
+						87:[MAX_CRED_LIM_12M<-0.212962955] yes=127,no=128,missing=127
+							127:[AVG_PND_MENOS_MAX_HI_CALCAR_FLOOR_12M<0.187649697] yes=161,no=162,missing=161
+								161:leaf=0.198044956
+								162:leaf=-0.200895265
+							128:leaf=-0.392626345
+						88:[AVG_PND_MENOS_VENC29_03M<0.933333516] yes=129,no=130,missing=129
+							129:[AVG_PCT_VIGENTEH_06M<-31.3843288] yes=163,no=164,missing=163
+								163:leaf=-0.483090371
+								164:leaf=0.137516752
+							130:[AVG_PND_MAS_PCT_VENC89_06M<0.00518500013] yes=165,no=166,missing=165
+								165:[AVG_PCT_VENC89_06M<0.00156400003] yes=195,no=196,missing=195
+									195:[AVG_PND_MENOS_PCT_VENC29_06M<436.008423] yes=227,no=228,missing=227
+										227:leaf=0.083368808
+										228:leaf=-0.3901802
+									196:[AVG_PND_MENOS_R_BAL_BY_MAX_BAL_06M<-1.05193639] yes=229,no=230,missing=229
+										229:leaf=0.195918396
+										230:leaf=-0.562601328
+								166:[AVG_PND_MAS_AVG_HI_CALCAR_L_03M<4.30435944] yes=197,no=198,missing=197
+									197:[MAX_D_CRED_LIM_TO_BAL_03M<-0.293947309] yes=231,no=232,missing=231
+										231:leaf=-0.179348528
+										232:leaf=0.23305203
+									198:[MS_OP<1.5476191] yes=233,no=234,missing=233
+										233:leaf=-0.507339478
+										234:leaf=0.168472052
+				28:leaf=-0.355349511
+			14:[MAX_MAX_HI_CALCAR_FLOOR_12M<-0.162337661] yes=29,no=30,missing=29
+				29:leaf=0.0175078958
+				30:[MIN_AVG_HI_CALCAR_L_12M<3.25] yes=53,no=54,missing=53
+					53:[AVG_PCT_VIGENTEH_06M<-5.14490032] yes=89,no=90,missing=89
+						89:leaf=0.304890573
+						90:[MAX_R_BAL_BY_CRED_LIM_03M<0.54963088] yes=131,no=132,missing=131
+							131:leaf=0.193360224
+							132:leaf=0.032928735
+					54:leaf=0.0207992103

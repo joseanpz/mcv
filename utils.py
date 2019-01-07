@@ -30,7 +30,7 @@ def predict_with_threshold(probs, threshold):
 
 
 def val_func(pred_probs, dmat):
-    thrs = [0.1, 0.25, 0.3, 0.5]
+    thrs = [0.6, 0.63, 0.65, 0.68, 0.7, 0.72]
     ret = []
     for thr in thrs:
         preds = predict_with_threshold(pred_probs, thr)
@@ -63,3 +63,16 @@ def get_xgb_feat_importances(clf):
     # Print the most important features and their importances
     print(feat_importances.head())
     return feat_importances
+
+
+def sampler(data, periods, sample, sample_exclude, month_size=500, seed=0):
+    if periods:
+        period = (data['FECHA'] == periods.pop()) & (~sample_exclude)
+        local_universe = data[period].drop_duplicates('RFC')
+        print(local_universe.shape)
+        period_sample = local_universe.sample(month_size, random_state=seed)
+        sample = pd.Series(data.index.isin(period_sample.index)) | sample
+        sample_exclude = data['RFC'].isin(period_sample['RFC']) | sample_exclude
+        return sampler(data, periods, sample, sample_exclude, month_size, seed)
+    else:
+        return sample, sample_exclude

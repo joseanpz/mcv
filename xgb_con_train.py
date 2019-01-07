@@ -39,9 +39,14 @@ print('----------------- Loading data ---------------')
 data_train = pd.read_csv(
     train_data_file
 )
-data_val = pd.read_csv(
-    val_data_file
-)
+
+np.random.seed(seed)
+rand_split = np.random.rand(len(data_train))
+val_list = rand_split >= 0.75
+# train_list = rand_split < 0.75
+
+data_val = data_train[val_list]
+# data_train = data_train[train_list]
 data_test = pd.read_csv(
     test_data_file
 )
@@ -74,24 +79,50 @@ evals = [(dtest, 'eval')]
 num_round = 50
 max_depth = 10
 learning_rate = 0.3
-params = {
+params_tmp = {
     'max_depth': max_depth,
     'eta': learning_rate,
     'silent': 1,
     'objective': 'binary:logistic',
     "eval_metric": "auc",
-    "seed": "1"
+    "seed": "1",
+    "scale_pos_weight": 24
 }
+params = {
+    'max_depth': 12,
+    'eta': 0.1,
+    'silent': 1,
+    'objective': 'binary:logistic',
+    "eval_metric": "auc",
+    "seed": "1",
+    "scale_pos_weight": 24,
+    "max_delta_step": 2.4592238788322622,
+    "min_child_weight": 10.108909877670685,
+    "gamma": 0.001,
+    "colsample_bytree": 0.4
+}
+# learning_rate = 0.1,
+# n_estimators = 200,
+# max_depth = 12,
+# min_child_weight = 10.108909877670685,
+# gamma = 0.001,
+# subsample = 1,
+# colsample_bytree = 0.4,
+# objective = 'binary:logistic',
+# # nthread=4,
+# max_delta_step = 2.4592238788322622,
+# scale_pos_weight = 1,
+# seed = 1)
 
 bst = pickle.load(
-    open('models/{}/pickles/md10_nr100_lr0.3.model'.format(dataset_folder), "rb")
+    open('models/{}/pickles/md10_nr150_lr0.3_aux.model'.format(dataset_folder), "rb")
 )
 
 print('------------------ Initialize trainig ---------------------')
 bst = train(params, dtrain, num_round, evals, feval=val_func, xgb_model=bst)
 
 bst.dump_model(
-    'models/{}/dumps/md{}_nr{}_lr{}.model.dump.raw.txt'.format(
+    'models/{}/dumps/md{}_nr{}_lr{}.model_aux.dump.raw.txt'.format(
         dataset_folder, str(max_depth), str(bst.best_ntree_limit), str(learning_rate)
     ),
     with_stats=False
@@ -100,7 +131,7 @@ bst.dump_model(
 pickle.dump(
     bst,
     open(
-        'models/{}/pickles/md{}_nr{}_lr{}.model'.format(
+        'models/{}/pickles/md{}_nr{}_lr{}_aux.model'.format(
             dataset_folder,
             str(max_depth),
             str(bst.best_ntree_limit),
